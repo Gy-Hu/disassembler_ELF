@@ -1,0 +1,3137 @@
+401000 : push ebp
+401001 : mov ebp, esp
+401003 : sub esp, 0xec
+401009 : push ebx
+40100a : push esi
+40100b : push edi
+40100c : lea edi, dword ptr [ebp - 0xec]
+401012 : mov ecx, 0x3b
+401017 : mov eax, 0xcccccccc
+40101c : rep stosd dword ptr es:[edi], eax
+40101e : cmp dword ptr [ebp + 8], 1
+401022 : jne 0x401033
+-------------------------------------
+401024 : mov eax, 1
+401029 : jmp 0x4010f4
+-------------------------------------
+40102e : jmp 0x4010f4
+-------------------------------------
+401033 : cmp dword ptr [ebp + 8], 2
+401037 : jne 0x401048
+-------------------------------------
+401039 : mov eax, 2
+40103e : jmp 0x4010f4
+-------------------------------------
+401043 : jmp 0x4010f4
+-------------------------------------
+401048 : mov dword ptr [ebp - 0x1c], 2
+40104f : mov eax, 4
+401054 : imul ecx, eax, 0
+401057 : mov dword ptr [ebp + ecx - 0x10], 1
+40105f : mov eax, 4
+401064 : shl eax, 0
+401067 : mov dword ptr [ebp + eax - 0x10], 1
+40106f : mov dword ptr [ebp - 0x28], 0
+401076 : jmp 0x401081
+-------------------------------------
+401078 : mov eax, dword ptr [ebp - 0x28]
+40107b : add eax, 1
+40107e : mov dword ptr [ebp - 0x28], eax
+-------------------------------------
+401081 : mov eax, dword ptr [ebp + 8]
+401084 : sub eax, 2
+401087 : cmp dword ptr [ebp - 0x28], eax
+40108a : jge 0x4010f1
+-------------------------------------
+40108c : mov eax, 4
+401091 : shl eax, 0
+401094 : mov ecx, 4
+401099 : imul edx, ecx, 0
+40109c : mov eax, dword ptr [ebp + eax - 0x10]
+4010a0 : add eax, dword ptr [ebp + edx - 0x10]
+4010a4 : mov ecx, 4
+4010a9 : shl ecx, 1
+4010ab : mov dword ptr [ebp + ecx - 0x10], eax
+4010af : mov eax, 4
+4010b4 : shl eax, 1
+4010b6 : mov ecx, dword ptr [ebp - 0x1c]
+4010b9 : add ecx, dword ptr [ebp + eax - 0x10]
+4010bd : mov dword ptr [ebp - 0x1c], ecx
+4010c0 : mov eax, 4
+4010c5 : shl eax, 0
+4010c8 : mov ecx, 4
+4010cd : imul edx, ecx, 0
+4010d0 : mov eax, dword ptr [ebp + eax - 0x10]
+4010d4 : mov dword ptr [ebp + edx - 0x10], eax
+4010d8 : mov eax, 4
+4010dd : shl eax, 1
+4010df : mov ecx, 4
+4010e4 : shl ecx, 0
+4010e7 : mov edx, dword ptr [ebp + eax - 0x10]
+4010eb : mov dword ptr [ebp + ecx - 0x10], edx
+4010ef : jmp 0x401078
+-------------------------------------
+4010f1 : mov eax, dword ptr [ebp - 0x1c]
+-------------------------------------
+4010f4 : push edx
+4010f5 : mov ecx, ebp
+4010f7 : push eax
+4010f8 : lea edx, dword ptr [0x40110c]
+4010fe : call 0x4012d0
+401103 : pop eax
+401104 : pop edx
+401105 : pop edi
+401106 : pop esi
+401107 : pop ebx
+401108 : mov esp, ebp
+40110a : pop ebp
+40110b : ret 
+40110c : add dword ptr [eax], eax
+40110e : add byte ptr [eax], al
+401110 : adc al, 0x11
+401112 : inc eax
+401113 : add al, dh
+-------------------------------------
+401130 : push ebp
+401131 : mov ebp, esp
+401133 : sub esp, 0xcc
+401139 : push ebx
+40113a : push esi
+40113b : push edi
+40113c : lea edi, dword ptr [ebp - 0xcc]
+401142 : mov ecx, 0x33
+401147 : mov eax, 0xcccccccc
+40114c : rep stosd dword ptr es:[edi], eax
+40114e : push 5
+401150 : call 0x401000
+-------------------------------------
+401155 : add esp, 4
+401158 : mov dword ptr [ebp - 8], eax
+40115b : mov esi, esp
+40115d : mov eax, dword ptr [ebp - 8]
+401160 : push eax
+401161 : push 0x404148
+401166 : call dword ptr [0x4040e0]
+-------------------------------------
+40116c : add esp, 8
+40116f : cmp esi, esp
+401171 : call 0x401330
+-------------------------------------
+401176 : mov esi, esp
+401178 : push 0x404158
+40117d : call dword ptr [0x4040d8]
+-------------------------------------
+401183 : add esp, 4
+401186 : cmp esi, esp
+401188 : call 0x401330
+-------------------------------------
+40118d : xor eax, eax
+40118f : pop edi
+401190 : pop esi
+401191 : pop ebx
+401192 : add esp, 0xcc
+401198 : cmp ebp, esp
+40119a : call 0x401330
+-------------------------------------
+40119f : mov esp, ebp
+4011a1 : pop ebp
+4011a2 : ret 
+-------------------------------------
+4011b0 : push ebp
+4011b1 : mov ebp, esp
+4011b3 : push ebx
+4011b4 : push esi
+4011b5 : mov esi, ecx
+4011b7 : mov ebx, edx
+4011b9 : test esi, esi
+4011bb : je 0x4011dc
+-------------------------------------
+4011bd : test ebx, ebx
+4011bf : je 0x4011dc
+-------------------------------------
+4011c1 : mov edx, dword ptr [ebp + 8]
+4011c4 : test edx, edx
+4011c6 : je 0x4011dc
+-------------------------------------
+4011c8 : push edi
+4011c9 : mov al, 0xcc
+4011cb : mov edi, esi
+4011cd : mov ecx, ebx
+4011cf : rep stosb byte ptr es:[edi], al
+4011d1 : mov eax, dword ptr [edx]
+4011d3 : mov dword ptr [esi + 4], eax
+4011d6 : mov dword ptr [esi + 0xc], ebx
+4011d9 : mov dword ptr [edx], esi
+4011db : pop edi
+-------------------------------------
+4011dc : pop esi
+4011dd : pop ebx
+4011de : pop ebp
+4011df : ret 4
+-------------------------------------
+4011f0 : push ebp
+4011f1 : mov ebp, esp
+4011f3 : push ecx
+4011f4 : push ebx
+4011f5 : mov ebx, edx
+4011f7 : mov dword ptr [ebp - 4], ecx
+4011fa : push esi
+4011fb : push edi
+4011fc : test ebx, ebx
+4011fe : je 0x40124d
+-------------------------------------
+401200 : xor esi, esi
+401202 : cmp dword ptr [ebx], esi
+401204 : jle 0x40124d
+-------------------------------------
+401206 : xor edi, edi
+401208 : jmp 0x401210
+-------------------------------------
+40120a : lea ebx, dword ptr [ebx]
+-------------------------------------
+401210 : mov ecx, dword ptr [ebx + 4]
+401213 : mov eax, dword ptr [ebp - 4]
+401216 : mov edx, dword ptr [ecx + edi]
+401219 : cmp dword ptr [edx + eax - 4], 0xcccccccc
+401221 : jne 0x401235
+-------------------------------------
+401223 : mov eax, dword ptr [ecx + edi + 4]
+401227 : add eax, edx
+401229 : mov edx, dword ptr [ebp - 4]
+40122c : cmp dword ptr [eax + edx], 0xcccccccc
+401233 : je 0x401245
+-------------------------------------
+401235 : push dword ptr [ecx + edi + 8]
+401239 : mov eax, dword ptr [ebp + 4]
+40123c : push eax
+40123d : call 0x401ab0
+-------------------------------------
+401242 : add esp, 8
+-------------------------------------
+401245 : inc esi
+401246 : add edi, 0xc
+401249 : cmp esi, dword ptr [ebx]
+40124b : jl 0x401210
+-------------------------------------
+40124d : mov esi, dword ptr [ebp + 8]
+401250 : xor edi, edi
+401252 : mov eax, esi
+401254 : test esi, esi
+401256 : je 0x4012b8
+-------------------------------------
+401258 : mov eax, dword ptr [eax + 4]
+40125b : inc edi
+40125c : test eax, eax
+40125e : jne 0x401258
+-------------------------------------
+401260 : test esi, esi
+401262 : je 0x4012b8
+-------------------------------------
+401264 : cmp dword ptr [esi], 0xcccccccc
+40126a : jne 0x401287
+-------------------------------------
+40126c : cmp dword ptr [esi + 0x14], 0xcccccccc
+401273 : jne 0x401287
+-------------------------------------
+401275 : cmp dword ptr [esi + 0x18], 0xcccccccc
+40127c : jne 0x401287
+-------------------------------------
+40127e : cmp dword ptr [esi + 0x1c], 0xcccccccc
+401285 : je 0x401295
+-------------------------------------
+401287 : mov eax, dword ptr [ebp + 4]
+40128a : push edi
+40128b : push esi
+40128c : push eax
+40128d : call 0x4018e0
+-------------------------------------
+401292 : add esp, 0xc
+-------------------------------------
+401295 : mov eax, dword ptr [esi + 0xc]
+401298 : cmp dword ptr [eax + esi - 4], 0xcccccccc
+4012a0 : je 0x4012b0
+-------------------------------------
+4012a2 : mov eax, dword ptr [ebp + 4]
+4012a5 : push edi
+4012a6 : push esi
+4012a7 : push eax
+4012a8 : call 0x4018e0
+-------------------------------------
+4012ad : add esp, 0xc
+-------------------------------------
+4012b0 : mov esi, dword ptr [esi + 4]
+4012b3 : dec edi
+4012b4 : test esi, esi
+4012b6 : jne 0x401264
+-------------------------------------
+4012b8 : pop edi
+4012b9 : pop esi
+4012ba : pop ebx
+4012bb : mov esp, ebp
+4012bd : pop ebp
+4012be : ret 4
+-------------------------------------
+4012d0 : push ebp
+4012d1 : mov ebp, esp
+4012d3 : push ecx
+4012d4 : push ebx
+4012d5 : mov ebx, edx
+4012d7 : mov dword ptr [ebp - 4], ecx
+4012da : push esi
+4012db : xor esi, esi
+4012dd : cmp dword ptr [ebx], esi
+4012df : jle 0x401322
+-------------------------------------
+4012e1 : push edi
+4012e2 : xor edi, edi
+-------------------------------------
+4012e4 : mov ecx, dword ptr [ebx + 4]
+4012e7 : mov eax, dword ptr [ebp - 4]
+4012ea : mov edx, dword ptr [ecx + edi]
+4012ed : cmp dword ptr [edx + eax - 4], 0xcccccccc
+4012f5 : jne 0x401309
+-------------------------------------
+4012f7 : mov eax, dword ptr [ecx + edi + 4]
+4012fb : add eax, edx
+4012fd : mov edx, dword ptr [ebp - 4]
+401300 : cmp dword ptr [eax + edx], 0xcccccccc
+401307 : je 0x401319
+-------------------------------------
+401309 : push dword ptr [ecx + edi + 8]
+40130d : mov eax, dword ptr [ebp + 4]
+401310 : push eax
+401311 : call 0x401ab0
+-------------------------------------
+401316 : add esp, 8
+-------------------------------------
+401319 : inc esi
+40131a : add edi, 0xc
+40131d : cmp esi, dword ptr [ebx]
+40131f : jl 0x4012e4
+-------------------------------------
+401321 : pop edi
+-------------------------------------
+401322 : pop esi
+401323 : pop ebx
+401324 : mov esp, ebp
+401326 : pop ebp
+401327 : ret 
+-------------------------------------
+401330 : jne 0x401333
+-------------------------------------
+401332 : ret 
+-------------------------------------
+401333 : push ebp
+401334 : mov ebp, esp
+401336 : sub esp, 0
+401339 : push eax
+40133a : push edx
+40133b : push ebx
+40133c : push esi
+40133d : push edi
+40133e : mov eax, dword ptr [ebp + 4]
+401341 : push 0
+401343 : push eax
+401344 : call 0x401a60
+-------------------------------------
+401349 : add esp, 8
+40134c : pop edi
+40134d : pop esi
+40134e : pop ebx
+40134f : pop edx
+401350 : pop eax
+401351 : mov esp, ebp
+401353 : pop ebp
+401354 : ret 
+-------------------------------------
+4013b0 : push ebp
+4013b1 : mov ebp, esp
+4013b3 : call 0x4016f0
+-------------------------------------
+4013b8 : mov dword ptr [0x406038], eax
+4013bd : push 1
+4013bf : call dword ptr [0x4040c4]
+-------------------------------------
+4013c5 : add esp, 4
+4013c8 : push -1
+4013ca : call dword ptr [0x40404c]
+-------------------------------------
+4013d0 : mov dword ptr [0x4063a0], eax
+4013d5 : mov eax, dword ptr [0x4063a0]
+4013da : mov dword ptr [0x4063a4], eax
+4013df : mov ecx, dword ptr [0x404098]
+4013e5 : mov edx, dword ptr [0x406068]
+4013eb : mov dword ptr [ecx], edx
+4013ed : mov eax, dword ptr [0x404094]
+4013f2 : mov ecx, dword ptr [0x40605c]
+4013f8 : mov dword ptr [eax], ecx
+4013fa : call 0x402580
+-------------------------------------
+4013ff : call 0x402070
+-------------------------------------
+401404 : cmp dword ptr [0x406014], 0
+40140b : jne 0x40141b
+-------------------------------------
+40140d : push 0x402390
+401412 : call dword ptr [0x4040a8]
+-------------------------------------
+401418 : add esp, 4
+-------------------------------------
+40141b : call 0x402610
+-------------------------------------
+401420 : cmp dword ptr [0x406018], -1
+401427 : jne 0x401434
+-------------------------------------
+401429 : push -1
+40142b : call dword ptr [0x4040ac]
+-------------------------------------
+401431 : add esp, 4
+-------------------------------------
+401434 : xor eax, eax
+401436 : pop ebp
+401437 : ret 
+-------------------------------------
+401440 : push ebp
+401441 : mov ebp, esp
+401443 : push 0x4025b0
+401448 : call 0x402550
+-------------------------------------
+40144d : add esp, 4
+401450 : mov eax, dword ptr [0x406064]
+401455 : mov dword ptr [0x40604c], eax
+40145a : push 0x40604c
+40145f : mov ecx, dword ptr [0x406060]
+401465 : push ecx
+401466 : push 0x406044
+40146b : push 0x406040
+401470 : push 0x40603c
+401475 : call dword ptr [0x4040c8]
+-------------------------------------
+40147b : add esp, 0x14
+40147e : mov dword ptr [0x406048], eax
+401483 : cmp dword ptr [0x406048], 0
+40148a : jge 0x401496
+-------------------------------------
+40148c : push 8
+40148e : call 0x40206a
+-------------------------------------
+401493 : add esp, 4
+-------------------------------------
+401496 : pop ebp
+401497 : ret 
+-------------------------------------
+4014a0 : push ebp
+4014a1 : mov ebp, esp
+4014a3 : mov eax, dword ptr fs:[0x18]
+4014a9 : pop ebp
+4014aa : ret 
+-------------------------------------
+4014b0 : push ebp
+4014b1 : mov ebp, esp
+4014b3 : push -2
+4014b5 : push 0x404d60
+4014ba : push 0x402660
+4014bf : mov eax, dword ptr fs:[0]
+4014c5 : push eax
+4014c6 : add esp, -0x1c
+4014c9 : push ebx
+4014ca : push esi
+4014cb : push edi
+4014cc : mov eax, dword ptr [0x406020]
+4014d1 : xor dword ptr [ebp - 8], eax
+4014d4 : xor eax, ebp
+4014d6 : push eax
+4014d7 : lea eax, dword ptr [ebp - 0x10]
+4014da : mov dword ptr fs:[0], eax
+4014e0 : mov dword ptr [ebp - 0x18], esp
+4014e3 : mov dword ptr [ebp - 4], 0
+4014ea : mov dword ptr [ebp - 0x1c], 0
+4014f1 : call 0x4014a0
+-------------------------------------
+4014f6 : mov eax, dword ptr [eax + 4]
+4014f9 : mov dword ptr [ebp - 0x20], eax
+4014fc : mov dword ptr [ebp - 0x24], 0
+-------------------------------------
+401503 : mov ecx, dword ptr [ebp - 0x20]
+401506 : mov edx, 0x406398
+40150b : xor eax, eax
+40150d : lock cmpxchg dword ptr [edx], ecx
+401511 : mov dword ptr [ebp - 0x1c], eax
+401514 : cmp dword ptr [ebp - 0x1c], 0
+401518 : je 0x40152d
+-------------------------------------
+40151a : mov eax, dword ptr [ebp - 0x1c]
+40151d : cmp eax, dword ptr [ebp - 0x20]
+401520 : jne 0x40152b
+-------------------------------------
+401522 : mov dword ptr [ebp - 0x24], 1
+401529 : jmp 0x40152d
+-------------------------------------
+40152b : jmp 0x401503
+-------------------------------------
+40152d : cmp dword ptr [0x40639c], 1
+401534 : jne 0x401542
+-------------------------------------
+401536 : push 0x1f
+401538 : call 0x40206a
+-------------------------------------
+40153d : add esp, 4
+401540 : jmp 0x40158d
+-------------------------------------
+401542 : cmp dword ptr [0x40639c], 0
+401549 : jne 0x401583
+-------------------------------------
+40154b : mov dword ptr [0x40639c], 1
+401555 : push 0x404104
+40155a : push 0x4040f4
+40155f : call 0x40264c
+-------------------------------------
+401564 : add esp, 8
+401567 : test eax, eax
+401569 : je 0x401581
+-------------------------------------
+40156b : mov dword ptr [ebp - 0x2c], 0xff
+401572 : mov dword ptr [ebp - 4], 0xfffffffe
+401579 : mov eax, dword ptr [ebp - 0x2c]
+40157c : jmp 0x4016d5
+-------------------------------------
+401581 : jmp 0x40158d
+-------------------------------------
+401583 : mov dword ptr [0x406030], 1
+-------------------------------------
+40158d : cmp dword ptr [0x40639c], 1
+401594 : jne 0x4015b2
+-------------------------------------
+401596 : push 0x4040f0
+40159b : push 0x4040e8
+4015a0 : call 0x402652
+-------------------------------------
+4015a5 : add esp, 8
+4015a8 : mov dword ptr [0x40639c], 2
+-------------------------------------
+4015b2 : cmp dword ptr [0x40639c], 2
+4015b9 : je 0x4015e2
+-------------------------------------
+4015bb : push 0x404160
+4015c0 : push 0x4041b0
+4015c5 : push 0
+4015c7 : push 0x229
+4015cc : push 0x4041b8
+4015d1 : push 2
+4015d3 : call dword ptr [0x4040c0]
+-------------------------------------
+4015d9 : add esp, 0x18
+4015dc : cmp eax, 1
+4015df : jne 0x4015e2
+-------------------------------------
+4015e1 : int3 
+-------------------------------------
+4015e2 : cmp dword ptr [ebp - 0x24], 0
+4015e6 : jne 0x4015f1
+-------------------------------------
+4015e8 : xor edx, edx
+4015ea : mov eax, 0x406398
+4015ef : xchg dword ptr [eax], edx
+-------------------------------------
+4015f1 : cmp dword ptr [0x4063a8], 0
+4015f8 : je 0x401617
+-------------------------------------
+4015fa : push 0x4063a8
+4015ff : call 0x402110
+-------------------------------------
+401604 : add esp, 4
+401607 : test eax, eax
+401609 : je 0x401617
+-------------------------------------
+40160b : push 0
+40160d : push 2
+40160f : push 0
+401611 : call dword ptr [0x4063a8]
+-------------------------------------
+401617 : push 1
+401619 : call dword ptr [0x4040bc]
+-------------------------------------
+40161f : add esp, 4
+401622 : mov ecx, dword ptr [0x40409c]
+401628 : mov edx, dword ptr [0x406044]
+40162e : mov dword ptr [ecx], edx
+401630 : mov eax, dword ptr [0x406044]
+401635 : push eax
+401636 : mov ecx, dword ptr [0x406040]
+40163c : push ecx
+40163d : mov edx, dword ptr [0x40603c]
+401643 : push edx
+401644 : call 0x401130
+-------------------------------------
+401649 : add esp, 0xc
+40164c : mov dword ptr [0x406034], eax
+401651 : cmp dword ptr [0x406038], 0
+401658 : jne 0x401666
+-------------------------------------
+40165a : mov eax, dword ptr [0x406034]
+40165f : push eax
+401660 : call dword ptr [0x4040b8]
+-------------------------------------
+401666 : cmp dword ptr [0x406030], 0
+40166d : jne 0x401675
+-------------------------------------
+40166f : call dword ptr [0x4040b0]
+-------------------------------------
+401675 : mov dword ptr [ebp - 4], 0xfffffffe
+40167c : jmp 0x4016d0
+-------------------------------------
+40167e : mov ecx, dword ptr [ebp - 0x14]
+401681 : mov edx, dword ptr [ecx]
+401683 : mov eax, dword ptr [edx]
+401685 : mov dword ptr [ebp - 0x28], eax
+401688 : mov ecx, dword ptr [ebp - 0x14]
+40168b : push ecx
+40168c : mov edx, dword ptr [ebp - 0x28]
+40168f : push edx
+401690 : call 0x402064
+-------------------------------------
+401695 : add esp, 8
+401698 : ret 
+-------------------------------------
+4016d0 : mov eax, dword ptr [0x406034]
+-------------------------------------
+4016d5 : mov ecx, dword ptr [ebp - 0x10]
+4016d8 : mov dword ptr fs:[0], ecx
+4016df : pop ecx
+4016e0 : pop edi
+4016e1 : pop esi
+4016e2 : pop ebx
+4016e3 : mov esp, ebp
+4016e5 : pop ebp
+4016e6 : ret 
+-------------------------------------
+4016f0 : push ebp
+4016f1 : mov ebp, esp
+4016f3 : sub esp, 0xc
+4016f6 : mov dword ptr [ebp - 8], 0x400000
+4016fd : mov eax, dword ptr [ebp - 8]
+401700 : movzx ecx, word ptr [eax]
+401703 : cmp ecx, 0x5a4d
+401709 : je 0x40170f
+-------------------------------------
+40170b : xor eax, eax
+40170d : jmp 0x40176e
+-------------------------------------
+40170f : mov edx, dword ptr [ebp - 8]
+401712 : mov eax, dword ptr [ebp - 8]
+401715 : add eax, dword ptr [edx + 0x3c]
+401718 : mov dword ptr [ebp - 4], eax
+40171b : mov ecx, dword ptr [ebp - 4]
+40171e : cmp dword ptr [ecx], 0x4550
+401724 : je 0x40172a
+-------------------------------------
+401726 : xor eax, eax
+401728 : jmp 0x40176e
+-------------------------------------
+40172a : mov edx, dword ptr [ebp - 4]
+40172d : movzx eax, word ptr [edx + 0x18]
+401731 : cmp eax, 0x10b
+401736 : je 0x40173c
+-------------------------------------
+401738 : xor eax, eax
+40173a : jmp 0x40176e
+-------------------------------------
+40173c : mov ecx, dword ptr [ebp - 4]
+40173f : cmp dword ptr [ecx + 0x74], 0xe
+401743 : ja 0x401749
+-------------------------------------
+401745 : xor eax, eax
+401747 : jmp 0x40176e
+-------------------------------------
+401749 : mov edx, 8
+40174e : imul eax, edx, 0xe
+401751 : mov ecx, dword ptr [ebp - 4]
+401754 : cmp dword ptr [ecx + eax + 0x78], 0
+401759 : je 0x401764
+-------------------------------------
+40175b : mov dword ptr [ebp - 0xc], 1
+401762 : jmp 0x40176b
+-------------------------------------
+401764 : mov dword ptr [ebp - 0xc], 0
+-------------------------------------
+40176b : mov eax, dword ptr [ebp - 0xc]
+-------------------------------------
+40176e : mov esp, ebp
+401770 : pop ebp
+401771 : ret 
+-------------------------------------
+401780 : push ebp
+401781 : mov ebp, esp
+401783 : call 0x4022b0
+-------------------------------------
+401788 : call 0x4014b0
+-------------------------------------
+40178d : pop ebp
+40178e : ret 
+-------------------------------------
+401790 : push ebp
+401791 : mov ebp, esp
+401793 : push -2
+401795 : push 0x404d80
+40179a : push 0x402660
+40179f : mov eax, dword ptr fs:[0]
+4017a5 : push eax
+4017a6 : sub esp, 0x24
+4017a9 : push ebx
+4017aa : push esi
+4017ab : push edi
+4017ac : mov eax, dword ptr [0x406020]
+4017b1 : xor dword ptr [ebp - 8], eax
+4017b4 : xor eax, ebp
+4017b6 : push eax
+4017b7 : lea eax, dword ptr [ebp - 0x10]
+4017ba : mov dword ptr fs:[0], eax
+4017c0 : mov dword ptr [ebp - 0x18], esp
+4017c3 : mov byte ptr [ebp - 0x19], 0
+4017c7 : mov dword ptr [ebp - 0x34], 0x1001
+4017ce : mov eax, dword ptr [ebp + 8]
+4017d1 : mov dword ptr [ebp - 0x30], eax
+4017d4 : lea eax, dword ptr [ebp - 0x19]
+4017d7 : mov dword ptr [ebp - 0x2c], eax
+4017da : mov dword ptr [ebp - 4], 0
+4017e1 : lea eax, dword ptr [ebp - 0x34]
+4017e4 : push eax
+4017e5 : push 6
+4017e7 : push 0
+4017e9 : push 0x406d1388
+4017ee : call dword ptr [0x404044]
+-------------------------------------
+4017f4 : jmp 0x40180c
+-------------------------------------
+4017f6 : mov eax, dword ptr [ebp - 0x14]
+4017f9 : mov eax, dword ptr [eax]
+4017fb : xor ecx, ecx
+4017fd : cmp dword ptr [eax], 0x406d1388
+401803 : sete cl
+401806 : mov eax, ecx
+401808 : ret 
+-------------------------------------
+40180c : mov dword ptr [ebp - 4], 0xfffffffe
+401813 : movzx eax, byte ptr [ebp - 0x19]
+401817 : mov ecx, dword ptr [ebp - 0x10]
+40181a : mov dword ptr fs:[0], ecx
+401821 : pop ecx
+401822 : pop edi
+401823 : pop esi
+401824 : pop ebx
+401825 : mov esp, ebp
+401827 : pop ebp
+401828 : ret 
+-------------------------------------
+401830 : push ebp
+401831 : mov ebp, esp
+401833 : push -2
+401835 : push 0x404da0
+40183a : push 0x402660
+40183f : mov eax, dword ptr fs:[0]
+401845 : push eax
+401846 : sub esp, 0x24
+401849 : push ebx
+40184a : push esi
+40184b : push edi
+40184c : mov eax, dword ptr [0x406020]
+401851 : xor dword ptr [ebp - 8], eax
+401854 : xor eax, ebp
+401856 : push eax
+401857 : lea eax, dword ptr [ebp - 0x10]
+40185a : mov dword ptr fs:[0], eax
+401860 : mov dword ptr [ebp - 0x18], esp
+401863 : mov byte ptr [ebp - 0x19], 0
+401867 : mov dword ptr [ebp - 0x34], 0x1002
+40186e : mov eax, dword ptr [ebp + 8]
+401871 : mov dword ptr [ebp - 0x30], eax
+401874 : mov eax, dword ptr [ebp + 0xc]
+401877 : mov dword ptr [ebp - 0x2c], eax
+40187a : mov eax, dword ptr [ebp + 0x10]
+40187d : mov dword ptr [ebp - 0x28], eax
+401880 : lea eax, dword ptr [ebp - 0x19]
+401883 : mov dword ptr [ebp - 0x24], eax
+401886 : mov eax, dword ptr [ebp + 0x14]
+401889 : mov dword ptr [ebp - 0x20], eax
+40188c : mov dword ptr [ebp - 4], 0
+401893 : lea eax, dword ptr [ebp - 0x34]
+401896 : push eax
+401897 : push 6
+401899 : push 0
+40189b : push 0x406d1388
+4018a0 : call dword ptr [0x404044]
+-------------------------------------
+4018a6 : jmp 0x4018be
+-------------------------------------
+4018a8 : mov eax, dword ptr [ebp - 0x14]
+4018ab : mov eax, dword ptr [eax]
+4018ad : xor ecx, ecx
+4018af : cmp dword ptr [eax], 0x406d1388
+4018b5 : sete cl
+4018b8 : mov eax, ecx
+4018ba : ret 
+-------------------------------------
+4018be : mov dword ptr [ebp - 4], 0xfffffffe
+4018c5 : movzx eax, byte ptr [ebp - 0x19]
+4018c9 : mov ecx, dword ptr [ebp - 0x10]
+4018cc : mov dword ptr fs:[0], ecx
+4018d3 : pop ecx
+4018d4 : pop edi
+4018d5 : pop esi
+4018d6 : pop ebx
+4018d7 : mov esp, ebp
+4018d9 : pop ebp
+4018da : ret 
+-------------------------------------
+4018e0 : push ebp
+4018e1 : mov ebp, esp
+4018e3 : sub esp, 0x148
+4018e9 : mov eax, dword ptr [0x406020]
+4018ee : xor eax, ebp
+4018f0 : mov dword ptr [ebp - 4], eax
+4018f3 : mov eax, dword ptr [ebp + 8]
+4018f6 : push edi
+4018f7 : mov edi, dword ptr [0x406010]
+4018fd : mov dword ptr [ebp - 0x144], eax
+401903 : mov eax, dword ptr [ebp + 0xc]
+401906 : mov dword ptr [ebp - 0x148], eax
+40190c : cmp edi, 0xff
+40190f : je 0x401a47
+-------------------------------------
+401915 : push ebx
+401916 : mov ebx, dword ptr [0x404038]
+40191c : push esi
+40191d : push 0x800
+401922 : push 0
+401924 : push 0x404680
+401929 : call ebx
+-------------------------------------
+40192b : mov esi, eax
+40192d : test esi, esi
+40192f : jne 0x401953
+-------------------------------------
+401931 : call dword ptr [0x404040]
+-------------------------------------
+401937 : cmp eax, 0x57
+40193a : jne 0x401a2f
+-------------------------------------
+401940 : push esi
+401941 : push esi
+401942 : push 0x404680
+401947 : call ebx
+-------------------------------------
+401949 : mov esi, eax
+40194b : test esi, esi
+40194d : je 0x401a2f
+-------------------------------------
+401953 : push 0x404698
+401958 : push esi
+401959 : call dword ptr [0x40403c]
+-------------------------------------
+40195f : mov ecx, eax
+401961 : mov dword ptr [0x406050], ecx
+401967 : test esi, esi
+401969 : je 0x401a2f
+-------------------------------------
+40196f : mov ebx, dword ptr [ebp - 0x148]
+401975 : test ebx, ebx
+401977 : je 0x401a2f
+-------------------------------------
+40197d : test ecx, ecx
+40197f : je 0x401a2f
+-------------------------------------
+401985 : mov eax, dword ptr [ebx + 0xc]
+401988 : lea esi, dword ptr [ebx + 0x20]
+40198b : push 0x4046f4
+401990 : push dword ptr [ebp + 0x10]
+401993 : sub eax, 0x24
+401996 : push 0x404700
+40199b : push eax
+40199c : push 0x40472c
+4019a1 : push esi
+4019a2 : push 0x404734
+4019a7 : push 0x404748
+4019ac : lea eax, dword ptr [ebp - 0x140]
+4019b2 : push 0x404790
+4019b7 : push eax
+4019b8 : call ecx
+-------------------------------------
+4019ba : mov eax, dword ptr [ebx + 0xc]
+4019bd : sub eax, 0x24
+4019c0 : push eax
+4019c1 : push esi
+4019c2 : lea eax, dword ptr [ebp - 0x4c]
+4019c5 : push eax
+4019c6 : lea eax, dword ptr [ebp - 0x18]
+4019c9 : push eax
+4019ca : call 0x401bb0
+-------------------------------------
+4019cf : add esp, 0x38
+4019d2 : lea eax, dword ptr [ebp - 0x4c]
+4019d5 : push 0x4047a4
+4019da : push eax
+4019db : push 0x4047a8
+4019e0 : lea eax, dword ptr [ebp - 0x18]
+4019e3 : push eax
+4019e4 : lea eax, dword ptr [ebp - 0x140]
+4019ea : push 0x4047ac
+4019ef : push eax
+4019f0 : call 0x401c20
+-------------------------------------
+4019f5 : add esp, 4
+4019f8 : lea eax, dword ptr [ebp + eax - 0x140]
+4019ff : push eax
+401a00 : call dword ptr [0x406050]
+-------------------------------------
+401a06 : lea eax, dword ptr [ebp - 0x140]
+401a0c : push eax
+401a0d : push 4
+401a0f : push edi
+401a10 : push dword ptr [ebp - 0x144]
+401a16 : call 0x401c40
+-------------------------------------
+401a1b : add esp, 0x28
+401a1e : pop esi
+401a1f : pop ebx
+401a20 : pop edi
+401a21 : mov ecx, dword ptr [ebp - 4]
+401a24 : xor ecx, ebp
+401a26 : call 0x402d80
+-------------------------------------
+401a2b : mov esp, ebp
+401a2d : pop ebp
+401a2e : ret 
+-------------------------------------
+401a2f : push 0x4046a8
+401a34 : push 4
+401a36 : push edi
+401a37 : push dword ptr [ebp - 0x144]
+401a3d : call 0x401c40
+-------------------------------------
+401a42 : add esp, 0x10
+401a45 : pop esi
+401a46 : pop ebx
+-------------------------------------
+401a47 : mov ecx, dword ptr [ebp - 4]
+401a4a : xor ecx, ebp
+401a4c : pop edi
+401a4d : call 0x402d80
+-------------------------------------
+401a52 : mov esp, ebp
+401a54 : pop ebp
+401a55 : ret 
+-------------------------------------
+401a60 : push ebp
+401a61 : mov ebp, esp
+401a63 : mov eax, dword ptr [ebp + 0xc]
+401a66 : cmp eax, 4
+401a69 : ja 0x401a8e
+-------------------------------------
+401a6b : mov ecx, dword ptr [eax*4 + 0x406000]
+401a72 : mov edx, dword ptr [eax*4 + 0x404210]
+401a79 : cmp ecx, 0xff
+401a7c : je 0x401aac
+-------------------------------------
+401a7e : push edx
+401a7f : push eax
+401a80 : push ecx
+401a81 : push dword ptr [ebp + 8]
+401a84 : call 0x401c40
+-------------------------------------
+401a89 : add esp, 0x10
+401a8c : pop ebp
+401a8d : ret 
+-------------------------------------
+401a8e : mov edx, dword ptr [0x404224]
+401a94 : mov eax, 5
+401a99 : push edx
+401a9a : push eax
+401a9b : mov ecx, 1
+401aa0 : push ecx
+401aa1 : push dword ptr [ebp + 8]
+401aa4 : call 0x401c40
+-------------------------------------
+401aa9 : add esp, 0x10
+-------------------------------------
+401aac : pop ebp
+401aad : ret 
+-------------------------------------
+401ab0 : push ebp
+401ab1 : mov ebp, esp
+401ab3 : sub esp, 0x40c
+401ab9 : mov eax, dword ptr [0x406020]
+401abe : xor eax, ebp
+401ac0 : mov dword ptr [ebp - 4], eax
+401ac3 : mov eax, dword ptr [ebp + 8]
+401ac6 : mov dword ptr [ebp - 0x408], eax
+401acc : mov eax, dword ptr [0x406008]
+401ad1 : mov dword ptr [ebp - 0x40c], eax
+401ad7 : push ebx
+401ad8 : mov ebx, dword ptr [ebp + 0xc]
+401adb : cmp eax, 0xff
+401ade : je 0x401ba1
+-------------------------------------
+401ae4 : cmp byte ptr [ebx], 0
+401ae7 : je 0x401b85
+-------------------------------------
+401aed : push ebx
+401aee : call 0x401c20
+-------------------------------------
+401af3 : add eax, 0x2d
+401af6 : add esp, 4
+401af9 : cmp eax, 0x400
+401afe : ja 0x401b85
+-------------------------------------
+401b04 : xor eax, eax
+401b06 : jmp 0x401b10
+-------------------------------------
+401b08 : lea esp, dword ptr [esp]
+401b0f : nop 
+-------------------------------------
+401b10 : mov cl, byte ptr [eax + 0x404240]
+401b16 : lea eax, dword ptr [eax + 1]
+401b19 : mov byte ptr [ebp + eax - 0x405], cl
+401b20 : test cl, cl
+401b22 : jne 0x401b10
+-------------------------------------
+401b24 : push esi
+401b25 : push edi
+401b26 : mov esi, ebx
+-------------------------------------
+401b28 : mov al, byte ptr [ebx]
+401b2a : inc ebx
+401b2b : test al, al
+401b2d : jne 0x401b28
+-------------------------------------
+401b2f : lea edi, dword ptr [ebp - 0x404]
+401b35 : sub ebx, esi
+401b37 : dec edi
+-------------------------------------
+401b38 : mov al, byte ptr [edi + 1]
+401b3b : inc edi
+401b3c : test al, al
+401b3e : jne 0x401b38
+-------------------------------------
+401b40 : mov ecx, ebx
+401b42 : mov edx, 0x40425c
+401b47 : shr ecx, 2
+401b4a : rep movsd dword ptr es:[edi], dword ptr [esi]
+401b4c : mov ecx, ebx
+401b4e : and ecx, 3
+401b51 : rep movsb byte ptr es:[edi], byte ptr [esi]
+401b53 : mov esi, edx
+-------------------------------------
+401b55 : mov al, byte ptr [edx]
+401b57 : inc edx
+401b58 : test al, al
+401b5a : jne 0x401b55
+-------------------------------------
+401b5c : lea edi, dword ptr [ebp - 0x404]
+401b62 : sub edx, esi
+401b64 : dec edi
+-------------------------------------
+401b65 : mov al, byte ptr [edi + 1]
+401b68 : inc edi
+401b69 : test al, al
+401b6b : jne 0x401b65
+-------------------------------------
+401b6d : mov ecx, edx
+401b6f : lea eax, dword ptr [ebp - 0x404]
+401b75 : shr ecx, 2
+401b78 : rep movsd dword ptr es:[edi], dword ptr [esi]
+401b7a : mov ecx, edx
+401b7c : and ecx, 3
+401b7f : rep movsb byte ptr es:[edi], byte ptr [esi]
+401b81 : pop edi
+401b82 : pop esi
+401b83 : jmp 0x401b8a
+-------------------------------------
+401b85 : mov eax, 0x404650
+-------------------------------------
+401b8a : push eax
+401b8b : push 2
+401b8d : push dword ptr [ebp - 0x40c]
+401b93 : push dword ptr [ebp - 0x408]
+401b99 : call 0x401c40
+-------------------------------------
+401b9e : add esp, 0x10
+-------------------------------------
+401ba1 : mov ecx, dword ptr [ebp - 4]
+401ba4 : xor ecx, ebp
+401ba6 : pop ebx
+401ba7 : call 0x402d80
+-------------------------------------
+401bac : mov esp, ebp
+401bae : pop ebp
+401baf : ret 
+-------------------------------------
+401bb0 : push ebp
+401bb1 : mov ebp, esp
+401bb3 : push ecx
+401bb4 : mov edx, dword ptr [ebp + 0x10]
+401bb7 : mov ecx, dword ptr [ebp + 0xc]
+401bba : push ebx
+401bbb : push esi
+401bbc : push edi
+401bbd : mov edi, dword ptr [ebp + 8]
+401bc0 : xor esi, esi
+401bc2 : sub edx, edi
+401bc4 : mov dword ptr [ebp + 0x10], edx
+-------------------------------------
+401bc7 : mov eax, dword ptr [ebp + 0x14]
+401bca : mov dword ptr [ebp - 4], ecx
+401bcd : cmp eax, 0x10
+401bd0 : jb 0x401bd7
+-------------------------------------
+401bd2 : mov eax, 0x10
+-------------------------------------
+401bd7 : cmp esi, eax
+401bd9 : jae 0x401c00
+-------------------------------------
+401bdb : mov bl, byte ptr [edx + edi]
+401bde : movzx eax, bl
+401be1 : push eax
+401be2 : push 0x404678
+401be7 : push ecx
+401be8 : call dword ptr [0x406050]
+-------------------------------------
+401bee : mov ecx, dword ptr [ebp - 4]
+401bf1 : add esp, 0xc
+401bf4 : mov edx, dword ptr [ebp + 0x10]
+401bf7 : inc esi
+401bf8 : mov byte ptr [edi], bl
+401bfa : add ecx, 3
+401bfd : inc edi
+401bfe : jmp 0x401bc7
+-------------------------------------
+401c00 : mov eax, dword ptr [ebp + 8]
+401c03 : pop edi
+401c04 : mov byte ptr [esi + eax], 0
+401c08 : mov eax, dword ptr [ebp + 0xc]
+401c0b : lea eax, dword ptr [eax + esi*2]
+401c0e : mov byte ptr [esi + eax], 0
+401c12 : pop esi
+401c13 : pop ebx
+401c14 : mov esp, ebp
+401c16 : pop ebp
+401c17 : ret 
+-------------------------------------
+401c20 : push ebp
+401c21 : mov ebp, esp
+401c23 : mov edx, dword ptr [ebp + 8]
+401c26 : mov eax, edx
+-------------------------------------
+401c28 : mov cl, byte ptr [eax]
+401c2a : inc eax
+401c2b : test cl, cl
+401c2d : jne 0x401c28
+-------------------------------------
+401c2f : sub eax, edx
+401c31 : dec eax
+401c32 : pop ebp
+401c33 : ret 
+-------------------------------------
+401c40 : push ebp
+401c41 : mov ebp, esp
+401c43 : sub esp, 0xe3c
+401c49 : mov eax, dword ptr [0x406020]
+401c4e : xor eax, ebp
+401c50 : mov dword ptr [ebp - 4], eax
+401c53 : mov eax, dword ptr [ebp + 0x10]
+401c56 : push ebx
+401c57 : mov ebx, dword ptr [ebp + 0x14]
+401c5a : push esi
+401c5b : mov esi, dword ptr [ebp + 8]
+401c5e : push edi
+401c5f : push esi
+401c60 : mov dword ptr [ebp - 0xe30], eax
+401c66 : mov dword ptr [ebp - 0xe3c], ebx
+401c6c : mov dword ptr [ebp - 0xe34], 0
+401c76 : call 0x401f30
+-------------------------------------
+401c7b : mov edi, eax
+401c7d : add esp, 4
+401c80 : test edi, edi
+401c82 : jne 0x401c93
+-------------------------------------
+401c84 : push esi
+401c85 : call 0x401f20
+-------------------------------------
+401c8a : add esp, 4
+401c8d : mov dword ptr [ebp - 0xe34], eax
+-------------------------------------
+401c93 : push 0
+401c95 : push 0
+401c97 : push -1
+401c99 : push ebx
+401c9a : mov ebx, dword ptr [0x404034]
+401ca0 : push 0
+401ca2 : push 0xfde9
+401ca7 : call ebx
+-------------------------------------
+401ca9 : cmp eax, 0x200
+401cae : jae 0x401cd3
+-------------------------------------
+401cb0 : push eax
+401cb1 : lea eax, dword ptr [ebp - 0xe2c]
+401cb7 : push eax
+401cb8 : push -1
+401cba : push dword ptr [ebp - 0xe3c]
+401cc0 : push 0
+401cc2 : push 0xfde9
+401cc7 : call ebx
+-------------------------------------
+401cc9 : lea ebx, dword ptr [ebp - 0xe2c]
+401ccf : test eax, eax
+401cd1 : jne 0x401cd8
+-------------------------------------
+401cd3 : mov ebx, 0x404558
+-------------------------------------
+401cd8 : push 0x1002
+401cdd : call 0x401790
+-------------------------------------
+401ce2 : add esp, 4
+401ce5 : test eax, eax
+401ce7 : je 0x401d0d
+-------------------------------------
+401ce9 : mov eax, dword ptr [ebp - 0xe30]
+401cef : push ebx
+401cf0 : push esi
+401cf1 : push dword ptr [eax*4 + 0x404228]
+401cf8 : push eax
+401cf9 : call 0x401830
+-------------------------------------
+401cfe : add esp, 0x10
+401d01 : test eax, eax
+401d03 : jne 0x401e1e
+-------------------------------------
+401d09 : xor al, al
+401d0b : jmp 0x401d0f
+-------------------------------------
+401d0d : mov al, 1
+-------------------------------------
+401d0f : cmp dword ptr [ebp - 0xe34], 0
+401d16 : jne 0x401d20
+-------------------------------------
+401d18 : test edi, edi
+401d1a : je 0x401e1d
+-------------------------------------
+401d20 : test al, al
+401d22 : je 0x401d32
+-------------------------------------
+401d24 : call dword ptr [0x404048]
+-------------------------------------
+401d2a : test eax, eax
+401d2c : jne 0x401e1d
+-------------------------------------
+401d32 : push 0x104
+401d37 : lea eax, dword ptr [ebp - 0x414]
+401d3d : push eax
+401d3e : lea eax, dword ptr [ebp - 0xe38]
+401d44 : push eax
+401d45 : push 0x104
+401d4a : lea eax, dword ptr [ebp - 0x20c]
+401d50 : push eax
+401d51 : lea eax, dword ptr [esi - 5]
+401d54 : push eax
+401d55 : call 0x402ad0
+-------------------------------------
+401d5a : add esp, 0x18
+401d5d : test edi, edi
+401d5f : je 0x401d8b
+-------------------------------------
+401d61 : push ebx
+401d62 : push dword ptr [ebp - 0xe30]
+401d68 : lea eax, dword ptr [ebp - 0x414]
+401d6e : push 0x4045c8
+401d73 : push eax
+401d74 : push dword ptr [ebp - 0xe38]
+401d7a : lea eax, dword ptr [ebp - 0x20c]
+401d80 : push eax
+401d81 : push dword ptr [ebp + 0xc]
+401d84 : call edi
+-------------------------------------
+401d86 : jmp 0x401e15
+-------------------------------------
+401d8b : mov ebx, dword ptr [0x404030]
+401d91 : lea eax, dword ptr [ebp - 0x720]
+401d97 : push 0
+401d99 : push 0
+401d9b : push 0x30a
+401da0 : push eax
+401da1 : push -1
+401da3 : lea eax, dword ptr [ebp - 0x20c]
+401da9 : mov edi, 0x404608
+401dae : push eax
+401daf : push 0
+401db1 : push 0xfde9
+401db6 : call ebx
+-------------------------------------
+401db8 : test eax, eax
+401dba : je 0x401dc2
+-------------------------------------
+401dbc : lea edi, dword ptr [ebp - 0x720]
+-------------------------------------
+401dc2 : push 0
+401dc4 : push 0
+401dc6 : push 0x30a
+401dcb : lea eax, dword ptr [ebp - 0xa2c]
+401dd1 : mov esi, 0x40461c
+401dd6 : push eax
+401dd7 : push -1
+401dd9 : lea eax, dword ptr [ebp - 0x414]
+401ddf : push eax
+401de0 : push 0
+401de2 : push 0xfde9
+401de7 : call ebx
+-------------------------------------
+401de9 : test eax, eax
+401deb : je 0x401df3
+-------------------------------------
+401ded : lea esi, dword ptr [ebp - 0xa2c]
+-------------------------------------
+401df3 : push dword ptr [ebp - 0xe3c]
+401df9 : push dword ptr [ebp - 0xe30]
+401dff : push 0x404630
+401e04 : push esi
+401e05 : push dword ptr [ebp - 0xe38]
+401e0b : push edi
+401e0c : push dword ptr [ebp + 0xc]
+401e0f : call dword ptr [ebp - 0xe34]
+-------------------------------------
+401e15 : add esp, 0x1c
+401e18 : cmp eax, 1
+401e1b : jne 0x401e1e
+-------------------------------------
+401e1d : int3 
+-------------------------------------
+401e1e : mov ecx, dword ptr [ebp - 4]
+401e21 : pop edi
+401e22 : pop esi
+401e23 : xor ecx, ebp
+401e25 : pop ebx
+401e26 : call 0x402d80
+-------------------------------------
+401e2b : mov esp, ebp
+401e2d : pop ebp
+401e2e : ret 
+-------------------------------------
+401e30 : push ebp
+401e31 : mov ebp, esp
+401e33 : sub esp, 0x408
+401e39 : mov eax, dword ptr [0x406020]
+401e3e : xor eax, ebp
+401e40 : mov dword ptr [ebp - 4], eax
+401e43 : mov eax, dword ptr [0x40600c]
+401e48 : mov dword ptr [ebp - 0x408], eax
+401e4e : push ebx
+401e4f : mov ebx, dword ptr [ebp + 8]
+401e52 : cmp eax, 0xff
+401e55 : je 0x401f0f
+-------------------------------------
+401e5b : test ebx, ebx
+401e5d : je 0x401ef5
+-------------------------------------
+401e63 : push ebx
+401e64 : call 0x401c20
+-------------------------------------
+401e69 : add eax, 0x3a
+401e6c : add esp, 4
+401e6f : cmp eax, 0x400
+401e74 : ja 0x401ef5
+-------------------------------------
+401e76 : xor eax, eax
+401e78 : jmp 0x401e80
+-------------------------------------
+401e7a : lea ebx, dword ptr [ebx]
+-------------------------------------
+401e80 : mov cl, byte ptr [eax + 0x404270]
+401e86 : lea eax, dword ptr [eax + 1]
+401e89 : mov byte ptr [ebp + eax - 0x405], cl
+401e90 : test cl, cl
+401e92 : jne 0x401e80
+-------------------------------------
+401e94 : push esi
+401e95 : push edi
+401e96 : mov esi, ebx
+-------------------------------------
+401e98 : mov al, byte ptr [ebx]
+401e9a : inc ebx
+401e9b : test al, al
+401e9d : jne 0x401e98
+-------------------------------------
+401e9f : lea edi, dword ptr [ebp - 0x404]
+401ea5 : sub ebx, esi
+401ea7 : dec edi
+-------------------------------------
+401ea8 : mov al, byte ptr [edi + 1]
+401eab : inc edi
+401eac : test al, al
+401eae : jne 0x401ea8
+-------------------------------------
+401eb0 : mov ecx, ebx
+401eb2 : mov edx, 0x404280
+401eb7 : shr ecx, 2
+401eba : rep movsd dword ptr es:[edi], dword ptr [esi]
+401ebc : mov ecx, ebx
+401ebe : and ecx, 3
+401ec1 : rep movsb byte ptr es:[edi], byte ptr [esi]
+401ec3 : mov esi, edx
+-------------------------------------
+401ec5 : mov al, byte ptr [edx]
+401ec7 : inc edx
+401ec8 : test al, al
+401eca : jne 0x401ec5
+-------------------------------------
+401ecc : lea edi, dword ptr [ebp - 0x404]
+401ed2 : sub edx, esi
+401ed4 : dec edi
+-------------------------------------
+401ed5 : mov al, byte ptr [edi + 1]
+401ed8 : inc edi
+401ed9 : test al, al
+401edb : jne 0x401ed5
+-------------------------------------
+401edd : mov ecx, edx
+401edf : lea eax, dword ptr [ebp - 0x404]
+401ee5 : shr ecx, 2
+401ee8 : rep movsd dword ptr es:[edi], dword ptr [esi]
+401eea : mov ecx, edx
+401eec : and ecx, 3
+401eef : rep movsb byte ptr es:[edi], byte ptr [esi]
+401ef1 : pop edi
+401ef2 : pop esi
+401ef3 : jmp 0x401efa
+-------------------------------------
+401ef5 : mov eax, 0x4047b8
+-------------------------------------
+401efa : push eax
+401efb : mov eax, dword ptr [ebp + 4]
+401efe : push 3
+401f00 : push dword ptr [ebp - 0x408]
+401f06 : push eax
+401f07 : call 0x401c40
+-------------------------------------
+401f0c : add esp, 0x10
+-------------------------------------
+401f0f : mov ecx, dword ptr [ebp - 4]
+401f12 : xor ecx, ebp
+401f14 : pop ebx
+401f15 : call 0x402d80
+-------------------------------------
+401f1a : mov esp, ebp
+401f1c : pop ebp
+401f1d : ret 
+-------------------------------------
+401f20 : mov eax, dword ptr [0x406054]
+401f25 : ret 
+-------------------------------------
+401f30 : mov eax, dword ptr [0x406058]
+401f35 : ret 
+-------------------------------------
+401f40 : push ebp
+401f41 : mov ebp, esp
+401f43 : mov eax, dword ptr [ebp + 8]
+401f46 : cmp eax, 4
+401f49 : ja 0x401f54
+-------------------------------------
+401f4b : mov eax, dword ptr [eax*4 + 0x4047ec]
+401f52 : pop ebp
+401f53 : ret 
+-------------------------------------
+401f54 : xor eax, eax
+401f56 : pop ebp
+401f57 : ret 
+-------------------------------------
+401f70 : push ebp
+401f71 : mov ebp, esp
+401f73 : mov eax, dword ptr [0x406054]
+401f78 : mov ecx, dword ptr [ebp + 8]
+401f7b : mov dword ptr [0x406054], ecx
+401f81 : mov dword ptr [0x406058], 0
+401f8b : pop ebp
+401f8c : ret 
+-------------------------------------
+401f90 : push ebp
+401f91 : mov ebp, esp
+401f93 : mov eax, dword ptr [0x406058]
+401f98 : mov ecx, dword ptr [ebp + 8]
+401f9b : mov dword ptr [0x406058], ecx
+401fa1 : mov dword ptr [0x406054], 0
+401fab : pop ebp
+401fac : ret 
+-------------------------------------
+401fb0 : push ebp
+401fb1 : mov ebp, esp
+401fb3 : mov edx, dword ptr [ebp + 8]
+401fb6 : cmp edx, 4
+401fb9 : ja 0x401fce
+-------------------------------------
+401fbb : mov eax, dword ptr [edx*4 + 0x406000]
+401fc2 : mov ecx, dword ptr [ebp + 0xc]
+401fc5 : mov dword ptr [edx*4 + 0x406000], ecx
+401fcc : pop ebp
+401fcd : ret 
+-------------------------------------
+401fce : or eax, 0xffffffff
+401fd1 : pop ebp
+401fd2 : ret 
+-------------------------------------
+401fe0 : push ebp
+401fe1 : mov ebp, esp
+401fe3 : mov eax, dword ptr [ebp + 8]
+401fe6 : mov ecx, dword ptr [eax]
+401fe8 : cmp dword ptr [ecx], 0xe06d7363
+401fee : jne 0x40203f
+-------------------------------------
+401ff0 : mov edx, dword ptr [ebp + 8]
+401ff3 : mov eax, dword ptr [edx]
+401ff5 : cmp dword ptr [eax + 0x10], 3
+401ff9 : jne 0x40203f
+-------------------------------------
+401ffb : mov ecx, dword ptr [ebp + 8]
+401ffe : mov edx, dword ptr [ecx]
+402000 : cmp dword ptr [edx + 0x14], 0x19930520
+402007 : je 0x402033
+-------------------------------------
+402009 : mov eax, dword ptr [ebp + 8]
+40200c : mov ecx, dword ptr [eax]
+40200e : cmp dword ptr [ecx + 0x14], 0x19930521
+402015 : je 0x402033
+-------------------------------------
+402017 : mov edx, dword ptr [ebp + 8]
+40201a : mov eax, dword ptr [edx]
+40201c : cmp dword ptr [eax + 0x14], 0x19930522
+402023 : je 0x402033
+-------------------------------------
+402025 : mov ecx, dword ptr [ebp + 8]
+402028 : mov edx, dword ptr [ecx]
+40202a : cmp dword ptr [edx + 0x14], 0x1994000
+402031 : jne 0x40203f
+-------------------------------------
+402033 : call 0x402d90
+-------------------------------------
+402038 : mov eax, 1
+40203d : jmp 0x402041
+-------------------------------------
+40203f : xor eax, eax
+-------------------------------------
+402041 : pop ebp
+402042 : ret 4
+-------------------------------------
+402064 : jmp dword ptr [0x4040d0]
+-------------------------------------
+40206a : jmp dword ptr [0x4040cc]
+-------------------------------------
+402070 : push ebp
+402071 : mov ebp, esp
+402073 : xor eax, eax
+402075 : pop ebp
+402076 : ret 
+-------------------------------------
+402090 : push ebp
+402091 : mov ebp, esp
+402093 : sub esp, 0xc
+402096 : mov eax, dword ptr [ebp + 8]
+402099 : mov ecx, dword ptr [ebp + 8]
+40209c : add ecx, dword ptr [eax + 0x3c]
+40209f : mov dword ptr [ebp - 8], ecx
+4020a2 : mov dword ptr [ebp - 0xc], 0
+4020a9 : mov edx, dword ptr [ebp - 8]
+4020ac : movzx eax, word ptr [edx + 0x14]
+4020b0 : mov ecx, dword ptr [ebp - 8]
+4020b3 : lea edx, dword ptr [ecx + eax + 0x18]
+4020b7 : mov dword ptr [ebp - 4], edx
+4020ba : jmp 0x4020ce
+-------------------------------------
+4020bc : mov eax, dword ptr [ebp - 0xc]
+4020bf : add eax, 1
+4020c2 : mov dword ptr [ebp - 0xc], eax
+4020c5 : mov ecx, dword ptr [ebp - 4]
+4020c8 : add ecx, 0x28
+4020cb : mov dword ptr [ebp - 4], ecx
+-------------------------------------
+4020ce : mov edx, dword ptr [ebp - 8]
+4020d1 : movzx eax, word ptr [edx + 6]
+4020d5 : cmp dword ptr [ebp - 0xc], eax
+4020d8 : jae 0x4020fd
+-------------------------------------
+4020da : mov ecx, dword ptr [ebp - 4]
+4020dd : mov edx, dword ptr [ebp + 0xc]
+4020e0 : cmp edx, dword ptr [ecx + 0xc]
+4020e3 : jb 0x4020fb
+-------------------------------------
+4020e5 : mov eax, dword ptr [ebp - 4]
+4020e8 : mov ecx, dword ptr [eax + 0xc]
+4020eb : mov edx, dword ptr [ebp - 4]
+4020ee : add ecx, dword ptr [edx + 8]
+4020f1 : cmp dword ptr [ebp + 0xc], ecx
+4020f4 : jae 0x4020fb
+-------------------------------------
+4020f6 : mov eax, dword ptr [ebp - 4]
+4020f9 : jmp 0x4020ff
+-------------------------------------
+4020fb : jmp 0x4020bc
+-------------------------------------
+4020fd : xor eax, eax
+-------------------------------------
+4020ff : mov esp, ebp
+402101 : pop ebp
+402102 : ret 
+-------------------------------------
+402110 : push ebp
+402111 : mov ebp, esp
+402113 : push -2
+402115 : push 0x404dc0
+40211a : push 0x402660
+40211f : mov eax, dword ptr fs:[0]
+402125 : push eax
+402126 : add esp, -0x30
+402129 : push ebx
+40212a : push esi
+40212b : push edi
+40212c : mov eax, dword ptr [0x406020]
+402131 : xor dword ptr [ebp - 8], eax
+402134 : xor eax, ebp
+402136 : push eax
+402137 : lea eax, dword ptr [ebp - 0x10]
+40213a : mov dword ptr fs:[0], eax
+402140 : mov dword ptr [ebp - 0x18], esp
+402143 : mov dword ptr [ebp - 0x1c], 0x400000
+40214a : mov dword ptr [ebp - 4], 0
+402151 : mov eax, dword ptr [ebp - 0x1c]
+402154 : push eax
+402155 : call 0x402240
+-------------------------------------
+40215a : add esp, 4
+40215d : test eax, eax
+40215f : jne 0x402177
+-------------------------------------
+402161 : mov dword ptr [ebp - 0x2c], 0
+402168 : mov dword ptr [ebp - 4], 0xfffffffe
+40216f : mov eax, dword ptr [ebp - 0x2c]
+402172 : jmp 0x402229
+-------------------------------------
+402177 : mov ecx, dword ptr [ebp + 8]
+40217a : sub ecx, dword ptr [ebp - 0x1c]
+40217d : mov dword ptr [ebp - 0x30], ecx
+402180 : mov edx, dword ptr [ebp - 0x30]
+402183 : push edx
+402184 : mov eax, dword ptr [ebp - 0x1c]
+402187 : push eax
+402188 : call 0x402090
+-------------------------------------
+40218d : add esp, 8
+402190 : mov dword ptr [ebp - 0x20], eax
+402193 : cmp dword ptr [ebp - 0x20], 0
+402197 : jne 0x4021ac
+-------------------------------------
+402199 : mov dword ptr [ebp - 0x34], 0
+4021a0 : mov dword ptr [ebp - 4], 0xfffffffe
+4021a7 : mov eax, dword ptr [ebp - 0x34]
+4021aa : jmp 0x402229
+-------------------------------------
+4021ac : mov ecx, dword ptr [ebp - 0x20]
+4021af : mov edx, dword ptr [ecx + 0x24]
+4021b2 : and edx, 0x80000000
+4021b8 : jne 0x4021c3
+-------------------------------------
+4021ba : mov dword ptr [ebp - 0x24], 1
+4021c1 : jmp 0x4021ca
+-------------------------------------
+4021c3 : mov dword ptr [ebp - 0x24], 0
+-------------------------------------
+4021ca : mov eax, dword ptr [ebp - 0x24]
+4021cd : mov dword ptr [ebp - 0x38], eax
+4021d0 : mov dword ptr [ebp - 4], 0xfffffffe
+4021d7 : mov eax, dword ptr [ebp - 0x38]
+4021da : jmp 0x402229
+-------------------------------------
+4021dc : mov dword ptr [ebp - 4], 0xfffffffe
+4021e3 : jmp 0x402229
+-------------------------------------
+4021e5 : mov ecx, dword ptr [ebp - 0x14]
+4021e8 : mov edx, dword ptr [ecx]
+4021ea : mov eax, dword ptr [edx]
+4021ec : mov dword ptr [ebp - 0x3c], eax
+4021ef : cmp dword ptr [ebp - 0x3c], 0xc0000005
+4021f6 : jne 0x402201
+-------------------------------------
+4021f8 : mov dword ptr [ebp - 0x28], 1
+4021ff : jmp 0x402208
+-------------------------------------
+402201 : mov dword ptr [ebp - 0x28], 0
+-------------------------------------
+402208 : mov eax, dword ptr [ebp - 0x28]
+40220b : ret 
+-------------------------------------
+402229 : mov ecx, dword ptr [ebp - 0x10]
+40222c : mov dword ptr fs:[0], ecx
+402233 : pop ecx
+402234 : pop edi
+402235 : pop esi
+402236 : pop ebx
+402237 : mov esp, ebp
+402239 : pop ebp
+40223a : ret 
+-------------------------------------
+402240 : push ebp
+402241 : mov ebp, esp
+402243 : sub esp, 0xc
+402246 : mov eax, dword ptr [ebp + 8]
+402249 : mov dword ptr [ebp - 4], eax
+40224c : mov ecx, dword ptr [ebp - 4]
+40224f : movzx edx, word ptr [ecx]
+402252 : cmp edx, 0x5a4d
+402258 : je 0x40225e
+-------------------------------------
+40225a : xor eax, eax
+40225c : jmp 0x402299
+-------------------------------------
+40225e : mov eax, dword ptr [ebp - 4]
+402261 : mov ecx, dword ptr [ebp - 4]
+402264 : add ecx, dword ptr [eax + 0x3c]
+402267 : mov dword ptr [ebp - 8], ecx
+40226a : mov edx, dword ptr [ebp - 8]
+40226d : cmp dword ptr [edx], 0x4550
+402273 : je 0x402279
+-------------------------------------
+402275 : xor eax, eax
+402277 : jmp 0x402299
+-------------------------------------
+402279 : mov eax, dword ptr [ebp - 8]
+40227c : add eax, 0x18
+40227f : mov dword ptr [ebp - 0xc], eax
+402282 : mov ecx, dword ptr [ebp - 0xc]
+402285 : movzx edx, word ptr [ecx]
+402288 : cmp edx, 0x10b
+40228e : je 0x402294
+-------------------------------------
+402290 : xor eax, eax
+402292 : jmp 0x402299
+-------------------------------------
+402294 : mov eax, 1
+-------------------------------------
+402299 : mov esp, ebp
+40229b : pop ebp
+40229c : ret 
+-------------------------------------
+4022b0 : push ebp
+4022b1 : mov ebp, esp
+4022b3 : sub esp, 0x14
+4022b6 : mov dword ptr [ebp - 0xc], 0
+4022bd : mov dword ptr [ebp - 8], 0
+4022c4 : cmp dword ptr [0x406020], 0xbb40e64e
+4022ce : je 0x4022ef
+-------------------------------------
+4022d0 : mov eax, dword ptr [0x406020]
+4022d5 : and eax, 0xffff0000
+4022da : je 0x4022ef
+-------------------------------------
+4022dc : mov ecx, dword ptr [0x406020]
+4022e2 : not ecx
+4022e4 : mov dword ptr [0x406024], ecx
+4022ea : jmp 0x402389
+-------------------------------------
+4022ef : lea edx, dword ptr [ebp - 0xc]
+4022f2 : push edx
+4022f3 : call dword ptr [0x404020]
+-------------------------------------
+4022f9 : mov eax, dword ptr [ebp - 0xc]
+4022fc : mov dword ptr [ebp - 4], eax
+4022ff : mov ecx, dword ptr [ebp - 4]
+402302 : xor ecx, dword ptr [ebp - 8]
+402305 : mov dword ptr [ebp - 4], ecx
+402308 : call dword ptr [0x404024]
+-------------------------------------
+40230e : xor eax, dword ptr [ebp - 4]
+402311 : mov dword ptr [ebp - 4], eax
+402314 : call dword ptr [0x404028]
+-------------------------------------
+40231a : xor eax, dword ptr [ebp - 4]
+40231d : mov dword ptr [ebp - 4], eax
+402320 : lea edx, dword ptr [ebp - 0x14]
+402323 : push edx
+402324 : call dword ptr [0x40402c]
+-------------------------------------
+40232a : mov eax, dword ptr [ebp - 4]
+40232d : xor eax, dword ptr [ebp - 0x14]
+402330 : mov dword ptr [ebp - 4], eax
+402333 : mov ecx, dword ptr [ebp - 4]
+402336 : xor ecx, dword ptr [ebp - 0x10]
+402339 : mov dword ptr [ebp - 4], ecx
+40233c : mov edx, dword ptr [ebp - 4]
+40233f : lea eax, dword ptr [ebp - 4]
+402342 : xor edx, eax
+402344 : mov dword ptr [ebp - 4], edx
+402347 : cmp dword ptr [ebp - 4], 0xbb40e64e
+40234e : jne 0x402359
+-------------------------------------
+402350 : mov dword ptr [ebp - 4], 0xbb40e64f
+402357 : jmp 0x402376
+-------------------------------------
+402359 : mov ecx, dword ptr [ebp - 4]
+40235c : and ecx, 0xffff0000
+402362 : jne 0x402376
+-------------------------------------
+402364 : mov edx, dword ptr [ebp - 4]
+402367 : or edx, 0x4711
+40236d : shl edx, 0x10
+402370 : or edx, dword ptr [ebp - 4]
+402373 : mov dword ptr [ebp - 4], edx
+-------------------------------------
+402376 : mov eax, dword ptr [ebp - 4]
+402379 : mov dword ptr [0x406020], eax
+40237e : mov ecx, dword ptr [ebp - 4]
+402381 : not ecx
+402383 : mov dword ptr [0x406024], ecx
+-------------------------------------
+402389 : mov esp, ebp
+40238b : pop ebp
+40238c : ret 
+-------------------------------------
+402390 : push ebp
+402391 : mov ebp, esp
+402393 : xor eax, eax
+402395 : pop ebp
+402396 : ret 
+-------------------------------------
+4023a0 : push ebp
+4023a1 : mov ebp, esp
+4023a3 : push ecx
+4023a4 : cmp dword ptr [0x4063a4], 0
+4023ab : je 0x4023b6
+-------------------------------------
+4023ad : cmp dword ptr [0x4063a0], 0
+4023b4 : jne 0x4023ec
+-------------------------------------
+4023b6 : cmp dword ptr [0x4063a4], 0
+4023bd : jne 0x4023c8
+-------------------------------------
+4023bf : cmp dword ptr [0x4063a0], 0
+4023c6 : je 0x4023ec
+-------------------------------------
+4023c8 : push 0x4048c0
+4023cd : push 0x4041b0
+4023d2 : push 0
+4023d4 : push 0x45
+4023d6 : push 0x404988
+4023db : push 2
+4023dd : call dword ptr [0x4040c0]
+-------------------------------------
+4023e3 : add esp, 0x18
+4023e6 : cmp eax, 1
+4023e9 : jne 0x4023ec
+-------------------------------------
+4023eb : int3 
+-------------------------------------
+4023ec : cmp dword ptr [0x4063a4], 0
+4023f3 : je 0x4023f9
+-------------------------------------
+4023f5 : xor eax, eax
+4023f7 : jmp 0x402445
+-------------------------------------
+4023f9 : push 0x4d
+4023fb : push 0x4049e4
+402400 : push 2
+402402 : push 4
+402404 : push 0x20
+402406 : call dword ptr [0x404060]
+-------------------------------------
+40240c : add esp, 0x14
+40240f : mov dword ptr [ebp - 4], eax
+402412 : mov ecx, dword ptr [ebp - 4]
+402415 : push ecx
+402416 : call dword ptr [0x40404c]
+-------------------------------------
+40241c : mov dword ptr [0x4063a4], eax
+402421 : mov edx, dword ptr [0x4063a4]
+402427 : mov dword ptr [0x4063a0], edx
+40242d : cmp dword ptr [ebp - 4], 0
+402431 : jne 0x40243a
+-------------------------------------
+402433 : mov eax, 0x18
+402438 : jmp 0x402445
+-------------------------------------
+40243a : mov eax, dword ptr [ebp - 4]
+40243d : mov dword ptr [eax], 0
+402443 : xor eax, eax
+-------------------------------------
+402445 : mov esp, ebp
+402447 : pop ebp
+402448 : ret 
+-------------------------------------
+402450 : push ebp
+402451 : mov ebp, esp
+402453 : push -2
+402455 : push 0x404de0
+40245a : push 0x402660
+40245f : mov eax, dword ptr fs:[0]
+402465 : push eax
+402466 : add esp, -0x14
+402469 : push ebx
+40246a : push esi
+40246b : push edi
+40246c : mov eax, dword ptr [0x406020]
+402471 : xor dword ptr [ebp - 8], eax
+402474 : xor eax, ebp
+402476 : push eax
+402477 : lea eax, dword ptr [ebp - 0x10]
+40247a : mov dword ptr fs:[0], eax
+402480 : mov dword ptr [ebp - 0x24], 0
+402487 : mov eax, dword ptr [0x4063a4]
+40248c : push eax
+40248d : call dword ptr [0x40401c]
+-------------------------------------
+402493 : mov dword ptr [ebp - 0x1c], eax
+402496 : cmp dword ptr [ebp - 0x1c], -1
+40249a : jne 0x4024ae
+-------------------------------------
+40249c : mov ecx, dword ptr [ebp + 8]
+40249f : push ecx
+4024a0 : call dword ptr [0x404068]
+-------------------------------------
+4024a6 : add esp, 4
+4024a9 : jmp 0x402536
+-------------------------------------
+4024ae : push 8
+4024b0 : call 0x402d9c
+-------------------------------------
+4024b5 : add esp, 4
+4024b8 : mov dword ptr [ebp - 4], 0
+4024bf : mov edx, dword ptr [0x4063a4]
+4024c5 : push edx
+4024c6 : call dword ptr [0x40401c]
+-------------------------------------
+4024cc : mov dword ptr [ebp - 0x1c], eax
+4024cf : mov eax, dword ptr [0x4063a0]
+4024d4 : push eax
+4024d5 : call dword ptr [0x40401c]
+-------------------------------------
+4024db : mov dword ptr [ebp - 0x20], eax
+4024de : lea ecx, dword ptr [ebp - 0x20]
+4024e1 : push ecx
+4024e2 : lea edx, dword ptr [ebp - 0x1c]
+4024e5 : push edx
+4024e6 : mov eax, dword ptr [ebp + 8]
+4024e9 : push eax
+4024ea : call dword ptr [0x40404c]
+-------------------------------------
+4024f0 : push eax
+4024f1 : call 0x402dae
+-------------------------------------
+4024f6 : add esp, 0xc
+4024f9 : mov dword ptr [ebp - 0x24], eax
+4024fc : mov ecx, dword ptr [ebp - 0x1c]
+4024ff : push ecx
+402500 : call dword ptr [0x40404c]
+-------------------------------------
+402506 : mov dword ptr [0x4063a4], eax
+40250b : mov edx, dword ptr [ebp - 0x20]
+40250e : push edx
+40250f : call dword ptr [0x40404c]
+-------------------------------------
+402515 : mov dword ptr [0x4063a0], eax
+40251a : mov dword ptr [ebp - 4], 0xfffffffe
+402521 : call 0x402528
+-------------------------------------
+402526 : jmp 0x402533
+-------------------------------------
+402528 : push 8
+40252a : call 0x402da2
+-------------------------------------
+40252f : add esp, 4
+402532 : ret 
+-------------------------------------
+402533 : mov eax, dword ptr [ebp - 0x24]
+-------------------------------------
+402536 : mov ecx, dword ptr [ebp - 0x10]
+402539 : mov dword ptr fs:[0], ecx
+402540 : pop ecx
+402541 : pop edi
+402542 : pop esi
+402543 : pop ebx
+402544 : mov esp, ebp
+402546 : pop ebp
+402547 : ret 
+-------------------------------------
+402550 : push ebp
+402551 : mov ebp, esp
+402553 : push ecx
+402554 : mov eax, dword ptr [ebp + 8]
+402557 : push eax
+402558 : call 0x402450
+-------------------------------------
+40255d : add esp, 4
+402560 : test eax, eax
+402562 : jne 0x40256d
+-------------------------------------
+402564 : mov dword ptr [ebp - 4], 0xffffffff
+40256b : jmp 0x402574
+-------------------------------------
+40256d : mov dword ptr [ebp - 4], 0
+-------------------------------------
+402574 : mov eax, dword ptr [ebp - 4]
+402577 : mov esp, ebp
+402579 : pop ebp
+40257a : ret 
+-------------------------------------
+402580 : push esi
+402581 : mov esi, 0x404d48
+402586 : mov eax, esi
+402588 : cmp eax, 0x404d4c
+40258d : jae 0x4025a3
+-------------------------------------
+40258f : nop 
+-------------------------------------
+402590 : mov eax, dword ptr [esi]
+402592 : test eax, eax
+402594 : je 0x402598
+-------------------------------------
+402596 : call eax
+-------------------------------------
+402598 : add esi, 4
+40259b : cmp esi, 0x404d4c
+4025a1 : jb 0x402590
+-------------------------------------
+4025a3 : pop esi
+4025a4 : ret 
+-------------------------------------
+4025e0 : push ebp
+4025e1 : mov ebp, esp
+4025e3 : cmp dword ptr [ebp + 8], 0
+4025e7 : jne 0x4025eb
+-------------------------------------
+4025e9 : jmp 0x402604
+-------------------------------------
+4025eb : mov eax, dword ptr [ebp + 0x1c]
+4025ee : push eax
+4025ef : mov ecx, dword ptr [ebp + 0x18]
+4025f2 : push ecx
+4025f3 : mov edx, dword ptr [ebp + 0x14]
+4025f6 : push edx
+4025f7 : mov eax, dword ptr [ebp + 0x10]
+4025fa : push eax
+4025fb : mov ecx, dword ptr [ebp + 0xc]
+4025fe : push ecx
+4025ff : call 0x402db4
+-------------------------------------
+402604 : pop ebp
+402605 : ret 
+-------------------------------------
+402610 : push ebp
+402611 : mov ebp, esp
+402613 : push 0
+402615 : push 0x1f
+402617 : push 0x404a18
+40261c : push 0x404a70
+402621 : push 0x404aa0
+402626 : push 0x30000
+40262b : push 0x10000
+402630 : push 0
+402632 : call 0x402dba
+-------------------------------------
+402637 : add esp, 0xc
+40263a : push eax
+40263b : call 0x4025e0
+-------------------------------------
+402640 : add esp, 0x18
+402643 : pop ebp
+402644 : ret 
+-------------------------------------
+40264c : jmp dword ptr [0x4040a4]
+-------------------------------------
+402652 : jmp dword ptr [0x4040a0]
+-------------------------------------
+402658 : int3 
+402659 : int3 
+40265a : int3 
+40265b : int3 
+40265c : int3 
+40265d : int3 
+40265e : int3 
+40265f : int3 
+402660 : push ebp
+402661 : mov ebp, esp
+402663 : mov eax, dword ptr [ebp + 0x14]
+402666 : push eax
+402667 : mov ecx, dword ptr [ebp + 0x10]
+40266a : push ecx
+40266b : mov edx, dword ptr [ebp + 0xc]
+40266e : push edx
+40266f : mov eax, dword ptr [ebp + 8]
+402672 : push eax
+402673 : push 0x402d80
+402678 : push 0x406020
+40267d : call 0x402dc0
+-------------------------------------
+402682 : add esp, 0x18
+402685 : pop ebp
+402686 : ret 
+-------------------------------------
+402690 : push ebp
+402691 : mov ebp, esp
+402693 : sub esp, 0x414
+402699 : mov eax, dword ptr [0x406020]
+40269e : xor eax, ebp
+4026a0 : mov dword ptr [ebp - 4], eax
+4026a3 : cmp byte ptr [0x406070], 0
+4026aa : je 0x4026bc
+-------------------------------------
+4026ac : xor eax, eax
+4026ae : mov ecx, dword ptr [ebp - 4]
+4026b1 : xor ecx, ebp
+4026b3 : call 0x402d80
+-------------------------------------
+4026b8 : mov esp, ebp
+4026ba : pop ebp
+4026bb : ret 
+-------------------------------------
+4026bc : mov byte ptr [0x406070], 1
+4026c3 : call 0x4027d0
+-------------------------------------
+4026c8 : test eax, eax
+4026ca : jne 0x4027b8
+-------------------------------------
+4026d0 : push esi
+4026d1 : push 0x404b44
+4026d6 : call dword ptr [0x404000]
+-------------------------------------
+4026dc : mov esi, dword ptr [0x404038]
+4026e2 : test eax, eax
+4026e4 : je 0x402750
+-------------------------------------
+4026e6 : push 0x104
+4026eb : lea ecx, dword ptr [ebp - 0x414]
+4026f1 : push ecx
+4026f2 : push eax
+4026f3 : call dword ptr [0x404004]
+-------------------------------------
+4026f9 : test eax, eax
+4026fb : je 0x402750
+-------------------------------------
+4026fd : push 0x104
+402702 : lea eax, dword ptr [ebp - 0x20c]
+402708 : push eax
+402709 : lea eax, dword ptr [ebp - 0x414]
+40270f : push eax
+402710 : call 0x402a00
+-------------------------------------
+402715 : add esp, 0xc
+402718 : test eax, eax
+40271a : je 0x402750
+-------------------------------------
+40271c : push 0x900
+402721 : push 0
+402723 : lea eax, dword ptr [ebp - 0x20c]
+402729 : push eax
+40272a : call esi
+-------------------------------------
+40272c : test eax, eax
+40272e : jne 0x4027b7
+-------------------------------------
+402734 : call dword ptr [0x404040]
+-------------------------------------
+40273a : cmp eax, 0x57
+40273d : jne 0x402750
+-------------------------------------
+40273f : push 8
+402741 : push 0
+402743 : lea eax, dword ptr [ebp - 0x20c]
+402749 : push eax
+40274a : call esi
+-------------------------------------
+40274c : test eax, eax
+40274e : jne 0x4027b7
+-------------------------------------
+402750 : push 0xa00
+402755 : push 0
+402757 : push 0x404c40
+40275c : call esi
+-------------------------------------
+40275e : test eax, eax
+402760 : jne 0x4027b7
+-------------------------------------
+402762 : call dword ptr [0x404040]
+-------------------------------------
+402768 : cmp eax, 0x57
+40276b : jne 0x4027b5
+-------------------------------------
+40276d : push 0x104
+402772 : lea eax, dword ptr [ebp - 0x414]
+402778 : push eax
+402779 : push 0
+40277b : call dword ptr [0x404004]
+-------------------------------------
+402781 : test eax, eax
+402783 : je 0x4027b5
+-------------------------------------
+402785 : push 0x104
+40278a : lea eax, dword ptr [ebp - 0x20c]
+402790 : push eax
+402791 : lea eax, dword ptr [ebp - 0x414]
+402797 : push eax
+402798 : call 0x402a00
+-------------------------------------
+40279d : add esp, 0xc
+4027a0 : test eax, eax
+4027a2 : je 0x4027b5
+-------------------------------------
+4027a4 : push 8
+4027a6 : push 0
+4027a8 : lea eax, dword ptr [ebp - 0x20c]
+4027ae : push eax
+4027af : call esi
+-------------------------------------
+4027b1 : test eax, eax
+4027b3 : jne 0x4027b7
+-------------------------------------
+4027b5 : xor eax, eax
+-------------------------------------
+4027b7 : pop esi
+-------------------------------------
+4027b8 : mov ecx, dword ptr [ebp - 4]
+4027bb : xor ecx, ebp
+4027bd : call 0x402d80
+-------------------------------------
+4027c2 : mov esp, ebp
+4027c4 : pop ebp
+4027c5 : ret 
+-------------------------------------
+4027d0 : push ebp
+4027d1 : mov ebp, esp
+4027d3 : sub esp, 0x224
+4027d9 : mov eax, dword ptr [0x406020]
+4027de : xor eax, ebp
+4027e0 : mov dword ptr [ebp - 4], eax
+4027e3 : push ebx
+4027e4 : mov ebx, dword ptr [0x404038]
+4027ea : push edi
+4027eb : push 0x800
+4027f0 : push 0
+4027f2 : push 0x404b60
+4027f7 : call ebx
+-------------------------------------
+4027f9 : mov edi, eax
+4027fb : test edi, edi
+4027fd : jne 0x40282b
+-------------------------------------
+4027ff : call dword ptr [0x404040]
+-------------------------------------
+402805 : cmp eax, 0x57
+402808 : jne 0x402819
+-------------------------------------
+40280a : push edi
+40280b : push edi
+40280c : push 0x404b60
+402811 : call ebx
+-------------------------------------
+402813 : mov edi, eax
+402815 : test edi, edi
+402817 : jne 0x40282b
+-------------------------------------
+402819 : pop edi
+40281a : xor eax, eax
+40281c : pop ebx
+40281d : mov ecx, dword ptr [ebp - 4]
+402820 : xor ecx, ebp
+402822 : call 0x402d80
+-------------------------------------
+402827 : mov esp, ebp
+402829 : pop ebp
+40282a : ret 
+-------------------------------------
+40282b : push esi
+40282c : mov esi, dword ptr [0x40403c]
+402832 : push 0x404b7c
+402837 : push edi
+402838 : call esi
+-------------------------------------
+40283a : mov dword ptr [ebp - 0x224], eax
+402840 : test eax, eax
+402842 : je 0x40288e
+-------------------------------------
+402844 : push 0x404b8c
+402849 : push edi
+40284a : call esi
+-------------------------------------
+40284c : mov dword ptr [ebp - 0x218], eax
+402852 : test eax, eax
+402854 : je 0x40288e
+-------------------------------------
+402856 : push 0x404ba0
+40285b : push edi
+40285c : call esi
+-------------------------------------
+40285e : mov dword ptr [ebp - 0x220], eax
+402864 : test eax, eax
+402866 : je 0x40288e
+-------------------------------------
+402868 : lea eax, dword ptr [ebp - 0x214]
+40286e : push eax
+40286f : push 1
+402871 : push 0
+402873 : push 0x404bb0
+402878 : push 0x80000002
+40287d : call dword ptr [ebp - 0x224]
+-------------------------------------
+402883 : test eax, eax
+402885 : je 0x4028a1
+-------------------------------------
+402887 : push edi
+402888 : call dword ptr [0x404008]
+-------------------------------------
+40288e : pop esi
+40288f : pop edi
+402890 : xor eax, eax
+402892 : pop ebx
+402893 : mov ecx, dword ptr [ebp - 4]
+402896 : xor ecx, ebp
+402898 : call 0x402d80
+-------------------------------------
+40289d : mov esp, ebp
+40289f : pop ebp
+4028a0 : ret 
+-------------------------------------
+4028a1 : lea eax, dword ptr [ebp - 0x210]
+4028a7 : mov dword ptr [ebp - 0x210], 0x208
+4028b1 : push eax
+4028b2 : lea eax, dword ptr [ebp - 0x20c]
+4028b8 : push eax
+4028b9 : lea eax, dword ptr [ebp - 0x21c]
+4028bf : push eax
+4028c0 : push 0
+4028c2 : push 0x404c0c
+4028c7 : push dword ptr [ebp - 0x214]
+4028cd : call dword ptr [ebp - 0x218]
+-------------------------------------
+4028d3 : push dword ptr [ebp - 0x214]
+4028d9 : mov esi, eax
+4028db : call dword ptr [ebp - 0x220]
+-------------------------------------
+4028e1 : push edi
+4028e2 : call dword ptr [0x404008]
+-------------------------------------
+4028e8 : test esi, esi
+4028ea : jne 0x40288e
+-------------------------------------
+4028ec : cmp dword ptr [ebp - 0x21c], 1
+4028f3 : jne 0x40288e
+-------------------------------------
+4028f5 : mov ecx, dword ptr [ebp - 0x210]
+4028fb : test cl, 1
+4028fe : jne 0x40288e
+-------------------------------------
+402900 : shr ecx, 1
+402902 : cmp ecx, 2
+402905 : jb 0x40288e
+-------------------------------------
+402907 : dec ecx
+402908 : cmp word ptr [ebp + ecx*2 - 0x20c], si
+402910 : jne 0x40288e
+-------------------------------------
+402916 : cmp word ptr [ebp + ecx*2 - 0x20e], 0x5c
+40291f : je 0x40292f
+-------------------------------------
+402921 : mov eax, 0x5c
+402926 : mov word ptr [ebp + ecx*2 - 0x20c], ax
+40292e : inc ecx
+-------------------------------------
+40292f : or eax, 0xffffffff
+402932 : sub eax, ecx
+402934 : cmp eax, 0x12
+402937 : jb 0x40288e
+-------------------------------------
+40293d : lea eax, dword ptr [ecx + 0x11]
+402940 : cmp eax, 0x104
+402945 : ja 0x40288e
+-------------------------------------
+40294b : mov eax, dword ptr [0x404b20]
+402950 : mov dword ptr [ebp + ecx*2 - 0x20c], eax
+402957 : mov eax, dword ptr [0x404b24]
+40295c : mov dword ptr [ebp + ecx*2 - 0x208], eax
+402963 : mov eax, dword ptr [0x404b28]
+402968 : mov dword ptr [ebp + ecx*2 - 0x204], eax
+40296f : mov eax, dword ptr [0x404b2c]
+402974 : mov dword ptr [ebp + ecx*2 - 0x200], eax
+40297b : mov eax, dword ptr [0x404b30]
+402980 : mov dword ptr [ebp + ecx*2 - 0x1fc], eax
+402987 : mov eax, dword ptr [0x404b34]
+40298c : mov dword ptr [ebp + ecx*2 - 0x1f8], eax
+402993 : mov eax, dword ptr [0x404b38]
+402998 : mov dword ptr [ebp + ecx*2 - 0x1f4], eax
+40299f : mov eax, dword ptr [0x404b3c]
+4029a4 : mov dword ptr [ebp + ecx*2 - 0x1f0], eax
+4029ab : mov ax, word ptr [0x404b40]
+4029b1 : push 0x900
+4029b6 : mov word ptr [ebp + ecx*2 - 0x1ec], ax
+4029be : lea eax, dword ptr [ebp - 0x20c]
+4029c4 : push 0
+4029c6 : push eax
+4029c7 : call ebx
+-------------------------------------
+4029c9 : mov esi, eax
+4029cb : test esi, esi
+4029cd : jne 0x4029e8
+-------------------------------------
+4029cf : call dword ptr [0x404040]
+-------------------------------------
+4029d5 : cmp eax, 0x57
+4029d8 : jne 0x4029e8
+-------------------------------------
+4029da : push 8
+4029dc : push esi
+4029dd : lea eax, dword ptr [ebp - 0x20c]
+4029e3 : push eax
+4029e4 : call ebx
+-------------------------------------
+4029e6 : mov esi, eax
+-------------------------------------
+4029e8 : mov ecx, dword ptr [ebp - 4]
+4029eb : mov eax, esi
+4029ed : pop esi
+4029ee : pop edi
+4029ef : xor ecx, ebp
+4029f1 : pop ebx
+4029f2 : call 0x402d80
+-------------------------------------
+4029f7 : mov esp, ebp
+4029f9 : pop ebp
+4029fa : ret 
+-------------------------------------
+402a00 : push ebp
+402a01 : mov ebp, esp
+402a03 : sub esp, 0x60c
+402a09 : mov eax, dword ptr [0x406020]
+402a0e : xor eax, ebp
+402a10 : mov dword ptr [ebp - 4], eax
+402a13 : mov eax, dword ptr [ebp + 8]
+402a16 : lea ecx, dword ptr [ebp - 0x20c]
+402a1c : push esi
+402a1d : mov esi, dword ptr [ebp + 0xc]
+402a20 : push 0x100
+402a25 : push ecx
+402a26 : push 0x100
+402a2b : lea ecx, dword ptr [ebp - 0x40c]
+402a31 : push ecx
+402a32 : push 0x100
+402a37 : lea ecx, dword ptr [ebp - 0x60c]
+402a3d : push ecx
+402a3e : push 3
+402a40 : lea ecx, dword ptr [ebp - 0xc]
+402a43 : push ecx
+402a44 : push eax
+402a45 : call 0x402dd2
+-------------------------------------
+402a4a : add esp, 0x24
+402a4d : test eax, eax
+402a4f : je 0x402a62
+-------------------------------------
+402a51 : xor eax, eax
+402a53 : pop esi
+402a54 : mov ecx, dword ptr [ebp - 4]
+402a57 : xor ecx, ebp
+402a59 : call 0x402d80
+-------------------------------------
+402a5e : mov esp, ebp
+402a60 : pop ebp
+402a61 : ret 
+-------------------------------------
+402a62 : push 0x404c2c
+402a67 : lea eax, dword ptr [ebp - 0x40c]
+402a6d : push 9
+402a6f : push eax
+402a70 : call 0x402dc6
+-------------------------------------
+402a75 : add esp, 0xc
+402a78 : test eax, eax
+402a7a : jne 0x402a51
+-------------------------------------
+402a7c : push 0x404c24
+402a81 : lea eax, dword ptr [ebp - 0x20c]
+402a87 : push 4
+402a89 : push eax
+402a8a : call 0x402dc6
+-------------------------------------
+402a8f : add esp, 0xc
+402a92 : test eax, eax
+402a94 : jne 0x402a51
+-------------------------------------
+402a96 : lea eax, dword ptr [ebp - 0x20c]
+402a9c : push eax
+402a9d : lea eax, dword ptr [ebp - 0x40c]
+402aa3 : push eax
+402aa4 : lea eax, dword ptr [ebp - 0x60c]
+402aaa : push eax
+402aab : lea eax, dword ptr [ebp - 0xc]
+402aae : push eax
+402aaf : push dword ptr [ebp + 0x10]
+402ab2 : push esi
+402ab3 : call 0x402dcc
+-------------------------------------
+402ab8 : mov ecx, dword ptr [ebp - 4]
+402abb : add esp, 0x18
+402abe : neg eax
+402ac0 : sbb eax, eax
+402ac2 : xor ecx, ebp
+402ac4 : inc eax
+402ac5 : pop esi
+402ac6 : call 0x402d80
+-------------------------------------
+402acb : mov esp, ebp
+402acd : pop ebp
+402ace : ret 
+-------------------------------------
+402ad0 : push ebp
+402ad1 : mov ebp, esp
+402ad3 : mov eax, dword ptr [ebp + 0x14]
+402ad6 : sub esp, 0x44
+402ad9 : xor ecx, ecx
+402adb : mov dword ptr [eax], 0
+402ae1 : mov eax, dword ptr [ebp + 0xc]
+402ae4 : push ebx
+402ae5 : mov ebx, dword ptr [ebp + 8]
+402ae8 : push 0x1c
+402aea : mov word ptr [eax], cx
+402aed : dec ebx
+402aee : lea eax, dword ptr [ebp - 0x44]
+402af1 : push eax
+402af2 : push ebx
+402af3 : call dword ptr [0x40400c]
+-------------------------------------
+402af9 : test eax, eax
+402afb : jne 0x402b04
+-------------------------------------
+402afd : xor eax, eax
+402aff : pop ebx
+402b00 : mov esp, ebp
+402b02 : pop ebp
+402b03 : ret 
+-------------------------------------
+402b04 : push dword ptr [ebp + 0x1c]
+402b07 : push dword ptr [ebp + 0x18]
+402b0a : push dword ptr [ebp - 0x40]
+402b0d : call dword ptr [0x404004]
+-------------------------------------
+402b13 : test eax, eax
+402b15 : je 0x402afd
+-------------------------------------
+402b17 : mov ecx, dword ptr [ebp - 0x40]
+402b1a : mov eax, 0x5a4d
+402b1f : cmp word ptr [ecx], ax
+402b22 : jne 0x402afd
+-------------------------------------
+402b24 : mov eax, dword ptr [ecx + 0x3c]
+402b27 : test eax, eax
+402b29 : jle 0x402afd
+-------------------------------------
+402b2b : cmp dword ptr [eax + ecx], 0x4550
+402b32 : push esi
+402b33 : lea esi, dword ptr [eax + ecx]
+402b36 : je 0x402b40
+-------------------------------------
+402b38 : pop esi
+402b39 : xor eax, eax
+402b3b : pop ebx
+402b3c : mov esp, ebp
+402b3e : pop ebp
+402b3f : ret 
+-------------------------------------
+402b40 : movzx eax, word ptr [esi + 0x14]
+402b44 : sub ebx, ecx
+402b46 : movzx edx, word ptr [esi + 6]
+402b4a : add eax, 0x24
+402b4d : add eax, esi
+402b4f : xor esi, esi
+402b51 : push edi
+402b52 : xor edi, edi
+402b54 : test edx, edx
+402b56 : je 0x402b6f
+-------------------------------------
+402b58 : mov ecx, dword ptr [eax]
+402b5a : cmp ebx, ecx
+402b5c : jb 0x402b67
+-------------------------------------
+402b5e : mov esi, ebx
+402b60 : sub esi, ecx
+402b62 : cmp ebx, dword ptr [eax - 4]
+402b65 : jb 0x402b6f
+-------------------------------------
+402b67 : inc edi
+402b68 : add eax, 0x28
+402b6b : cmp edi, edx
+402b6d : jb 0x402b58
+-------------------------------------
+402b6f : cmp edi, edx
+402b71 : je 0x402bd0
+-------------------------------------
+402b73 : inc edi
+402b74 : cmp byte ptr [0x406071], 0
+402b7b : jne 0x402b9d
+-------------------------------------
+402b7d : cmp dword ptr [0x40606c], 0
+402b84 : jne 0x402bd0
+-------------------------------------
+402b86 : call 0x402690
+-------------------------------------
+402b8b : mov dword ptr [0x40606c], eax
+402b90 : test eax, eax
+402b92 : je 0x402bd0
+-------------------------------------
+402b94 : mov byte ptr [0x406071], 1
+402b9b : jmp 0x402ba2
+-------------------------------------
+402b9d : mov eax, dword ptr [0x40606c]
+-------------------------------------
+402ba2 : push 0x404c54
+402ba7 : push eax
+402ba8 : call dword ptr [0x40403c]
+-------------------------------------
+402bae : test eax, eax
+402bb0 : je 0x402bd0
+-------------------------------------
+402bb2 : lea ecx, dword ptr [ebp - 0x10]
+402bb5 : push ecx
+402bb6 : push 0
+402bb8 : push 0
+402bba : lea ecx, dword ptr [ebp - 0x28]
+402bbd : push ecx
+402bbe : push 0
+402bc0 : push 0
+402bc2 : push 0
+402bc4 : push dword ptr [ebp + 0x18]
+402bc7 : call eax
+-------------------------------------
+402bc9 : add esp, 0x20
+402bcc : test eax, eax
+402bce : jne 0x402bd9
+-------------------------------------
+402bd0 : pop edi
+402bd1 : pop esi
+402bd2 : xor eax, eax
+402bd4 : pop ebx
+402bd5 : mov esp, ebp
+402bd7 : pop ebp
+402bd8 : ret 
+-------------------------------------
+402bd9 : mov ecx, dword ptr [ebp - 0x10]
+402bdc : xor ebx, ebx
+402bde : mov dword ptr [ebp - 0x18], ebx
+402be1 : mov eax, dword ptr [ecx]
+402be3 : call dword ptr [eax]
+-------------------------------------
+402be5 : cmp eax, 0x1329141
+402bea : jne 0x402d6d
+-------------------------------------
+402bf0 : mov ecx, dword ptr [ebp - 0x10]
+402bf3 : lea edx, dword ptr [ebp - 0x1c]
+402bf6 : push edx
+402bf7 : push 0x404c68
+402bfc : push ebx
+402bfd : mov eax, dword ptr [ecx]
+402bff : call dword ptr [eax + 0x1c]
+-------------------------------------
+402c02 : test eax, eax
+402c04 : je 0x402d6d
+-------------------------------------
+402c0a : mov ecx, dword ptr [ebp - 0x1c]
+402c0d : lea edx, dword ptr [ebp - 0xc]
+402c10 : push ebx
+402c11 : push ebx
+402c12 : push ebx
+402c13 : mov eax, dword ptr [ecx]
+402c15 : push edx
+402c16 : push esi
+402c17 : push edi
+402c18 : call dword ptr [eax + 0x20]
+-------------------------------------
+402c1b : test eax, eax
+402c1d : je 0x402d65
+-------------------------------------
+402c23 : mov ecx, dword ptr [ebp - 0xc]
+402c26 : lea edx, dword ptr [ebp - 4]
+402c29 : mov dword ptr [ebp - 4], ebx
+402c2c : push edx
+402c2d : mov eax, dword ptr [ecx]
+402c2f : mov eax, dword ptr [eax + 0x68]
+402c32 : call eax
+-------------------------------------
+402c34 : test al, al
+402c36 : je 0x402d5d
+-------------------------------------
+402c3c : mov ecx, dword ptr [ebp - 4]
+402c3f : test ecx, ecx
+402c41 : je 0x402d5d
+-------------------------------------
+402c47 : mov eax, dword ptr [ecx]
+402c49 : call dword ptr [eax + 8]
+-------------------------------------
+402c4c : test eax, eax
+402c4e : je 0x402d43
+-------------------------------------
+402c54 : mov ecx, dword ptr [ebp - 4]
+402c57 : lea edx, dword ptr [ebp - 8]
+402c5a : push 0
+402c5c : push edx
+402c5d : lea edx, dword ptr [ebp - 0x20]
+402c60 : mov eax, dword ptr [ecx]
+402c62 : push edx
+402c63 : lea edx, dword ptr [ebp + 8]
+402c66 : push edx
+402c67 : mov eax, dword ptr [eax + 0xc]
+402c6a : lea edx, dword ptr [ebp - 0x14]
+402c6d : push edx
+402c6e : push 0
+402c70 : call eax
+-------------------------------------
+402c72 : test al, al
+402c74 : je 0x402d53
+-------------------------------------
+402c7a : movzx eax, word ptr [ebp + 8]
+402c7e : cmp eax, edi
+402c80 : jne 0x402c92
+-------------------------------------
+402c82 : mov ecx, dword ptr [ebp - 0x14]
+402c85 : cmp ecx, esi
+402c87 : ja 0x402c92
+-------------------------------------
+402c89 : mov eax, dword ptr [ebp - 0x20]
+402c8c : add eax, ecx
+402c8e : cmp esi, eax
+402c90 : jb 0x402ca3
+-------------------------------------
+402c92 : mov ecx, dword ptr [ebp - 4]
+402c95 : mov eax, dword ptr [ecx]
+402c97 : call dword ptr [eax + 8]
+-------------------------------------
+402c9a : test eax, eax
+402c9c : jne 0x402c54
+-------------------------------------
+402c9e : jmp 0x402d43
+-------------------------------------
+402ca3 : mov eax, dword ptr [ebp - 8]
+402ca6 : test eax, eax
+402ca8 : je 0x402d53
+-------------------------------------
+402cae : cmp eax, 0x1fffffff
+402cb3 : jae 0x402d53
+-------------------------------------
+402cb9 : shl eax, 3
+402cbc : push eax
+402cbd : push 0
+402cbf : call dword ptr [0x404010]
+-------------------------------------
+402cc5 : push eax
+402cc6 : call dword ptr [0x404018]
+-------------------------------------
+402ccc : mov ebx, eax
+402cce : test ebx, ebx
+402cd0 : je 0x402d53
+-------------------------------------
+402cd6 : mov ecx, dword ptr [ebp - 4]
+402cd9 : lea edx, dword ptr [ebp - 8]
+402cdc : push ebx
+402cdd : push edx
+402cde : push 0
+402ce0 : mov eax, dword ptr [ecx]
+402ce2 : lea edx, dword ptr [ebp - 0x24]
+402ce5 : push 0
+402ce7 : push 0
+402ce9 : push edx
+402cea : mov eax, dword ptr [eax + 0xc]
+402ced : call eax
+-------------------------------------
+402cef : test al, al
+402cf1 : je 0x402d43
+-------------------------------------
+402cf3 : sub esi, dword ptr [ebp - 0x14]
+402cf6 : cmp esi, dword ptr [ebx]
+402cf8 : jb 0x402d43
+-------------------------------------
+402cfa : mov ecx, dword ptr [ebp - 8]
+402cfd : mov eax, 1
+402d02 : cmp ecx, eax
+402d04 : jbe 0x402d10
+-------------------------------------
+402d06 : cmp esi, dword ptr [ebx + eax*8]
+402d09 : jb 0x402d10
+-------------------------------------
+402d0b : inc eax
+402d0c : cmp eax, ecx
+402d0e : jb 0x402d06
+-------------------------------------
+402d10 : mov eax, dword ptr [ebx + eax*8 - 4]
+402d14 : lea edx, dword ptr [ebp + 0x10]
+402d17 : mov ecx, dword ptr [ebp + 0x14]
+402d1a : and eax, 0xffffff
+402d1f : push 0
+402d21 : push 0
+402d23 : push 0
+402d25 : mov dword ptr [ecx], eax
+402d27 : mov ecx, dword ptr [ebp - 0xc]
+402d2a : push edx
+402d2b : push dword ptr [ebp + 0xc]
+402d2e : mov eax, dword ptr [ecx]
+402d30 : push dword ptr [ebp - 0x24]
+402d33 : mov eax, dword ptr [eax + 0x70]
+402d36 : call eax
+-------------------------------------
+402d38 : test al, al
+402d3a : je 0x402d43
+-------------------------------------
+402d3c : mov dword ptr [ebp - 0x18], 1
+-------------------------------------
+402d43 : push ebx
+402d44 : push 0
+402d46 : call dword ptr [0x404010]
+-------------------------------------
+402d4c : push eax
+402d4d : call dword ptr [0x404014]
+-------------------------------------
+402d53 : mov ecx, dword ptr [ebp - 4]
+402d56 : mov eax, dword ptr [ecx]
+402d58 : call dword ptr [eax]
+-------------------------------------
+402d5a : mov ebx, dword ptr [ebp - 0x18]
+-------------------------------------
+402d5d : mov ecx, dword ptr [ebp - 0xc]
+402d60 : mov eax, dword ptr [ecx]
+402d62 : call dword ptr [eax + 0x40]
+-------------------------------------
+402d65 : mov ecx, dword ptr [ebp - 0x1c]
+402d68 : mov edx, dword ptr [ecx]
+402d6a : call dword ptr [edx + 0x38]
+-------------------------------------
+402d6d : mov ecx, dword ptr [ebp - 0x10]
+402d70 : mov edx, dword ptr [ecx]
+402d72 : call dword ptr [edx + 0x2c]
+-------------------------------------
+402d75 : pop edi
+402d76 : pop esi
+402d77 : mov eax, ebx
+402d79 : pop ebx
+402d7a : mov esp, ebp
+402d7c : pop ebp
+402d7d : ret 
+-------------------------------------
+402d80 : cmp ecx, dword ptr [0x406020]
+402d86 : jne 0x402d8a
+-------------------------------------
+402d88 : ret 
+-------------------------------------
+402d8a : jmp 0x402e30
+-------------------------------------
+402d8f : int3 
+-------------------------------------
+402d90 : jmp dword ptr [0x404090]
+-------------------------------------
+402d96 : jmp dword ptr [0x404070]
+-------------------------------------
+402d9c : jmp dword ptr [0x404058]
+-------------------------------------
+402da2 : jmp dword ptr [0x40405c]
+-------------------------------------
+402da8 : jmp dword ptr [0x404060]
+-------------------------------------
+402dae : jmp dword ptr [0x404064]
+-------------------------------------
+402db4 : jmp dword ptr [0x40406c]
+-------------------------------------
+402dba : jmp dword ptr [0x4040dc]
+-------------------------------------
+402dc0 : jmp dword ptr [0x404074]
+-------------------------------------
+402dc6 : jmp dword ptr [0x404078]
+-------------------------------------
+402dcc : jmp dword ptr [0x40407c]
+-------------------------------------
+402dd2 : jmp dword ptr [0x404080]
+-------------------------------------
+402dd8 : int3 
+402dd9 : int3 
+402dda : int3 
+402ddb : int3 
+402ddc : int3 
+402ddd : int3 
+402dde : int3 
+402ddf : int3 
+-------------------------------------
+402de0 : push ebp
+402de1 : mov ebp, esp
+402de3 : call dword ptr [0x404048]
+-------------------------------------
+402de9 : mov dword ptr [0x406394], eax
+402dee : push 1
+402df0 : call 0x403156
+-------------------------------------
+402df5 : add esp, 4
+402df8 : mov eax, dword ptr [ebp + 8]
+402dfb : push eax
+402dfc : call 0x40315c
+-------------------------------------
+402e01 : add esp, 4
+402e04 : cmp dword ptr [0x406394], 0
+402e0b : jne 0x402e17
+-------------------------------------
+402e0d : push 1
+402e0f : call 0x403156
+-------------------------------------
+402e14 : add esp, 4
+-------------------------------------
+402e17 : push 0xc0000409
+402e1c : call 0x403162
+-------------------------------------
+402e21 : add esp, 4
+402e24 : pop ebp
+402e25 : ret 
+-------------------------------------
+402e30 : push ebp
+402e31 : mov ebp, esp
+402e33 : sub esp, 0x324
+402e39 : push 0x17
+402e3b : call 0x4031e0
+-------------------------------------
+402e40 : test eax, eax
+402e42 : je 0x402e4b
+-------------------------------------
+402e44 : mov ecx, 2
+402e49 : int 0x29
+-------------------------------------
+402e4b : mov dword ptr [0x406178], eax
+402e50 : mov dword ptr [0x406174], ecx
+402e56 : mov dword ptr [0x406170], edx
+402e5c : mov dword ptr [0x40616c], ebx
+402e62 : mov dword ptr [0x406168], esi
+402e68 : mov dword ptr [0x406164], edi
+402e6e : mov word ptr [0x406190], ss
+402e75 : mov word ptr [0x406184], cs
+402e7c : mov word ptr [0x406160], ds
+402e83 : mov word ptr [0x40615c], es
+402e8a : mov word ptr [0x406158], fs
+402e91 : mov word ptr [0x406154], gs
+402e98 : pushfd 
+402e99 : pop dword ptr [0x406188]
+402e9f : mov eax, dword ptr [ebp]
+402ea2 : mov dword ptr [0x40617c], eax
+402ea7 : mov eax, dword ptr [ebp + 4]
+402eaa : mov dword ptr [0x406180], eax
+402eaf : lea eax, dword ptr [ebp + 8]
+402eb2 : mov dword ptr [0x40618c], eax
+402eb7 : mov eax, dword ptr [ebp - 0x324]
+402ebd : mov dword ptr [0x4060c8], 0x10001
+402ec7 : mov eax, dword ptr [0x406180]
+402ecc : mov dword ptr [0x406084], eax
+402ed1 : mov dword ptr [0x406078], 0xc0000409
+402edb : mov dword ptr [0x40607c], 1
+402ee5 : mov dword ptr [0x406088], 1
+402eef : mov ecx, 4
+402ef4 : imul edx, ecx, 0
+402ef7 : mov dword ptr [edx + 0x40608c], 2
+402f01 : mov eax, 4
+402f06 : imul ecx, eax, 0
+402f09 : mov edx, dword ptr [0x406020]
+402f0f : mov dword ptr [ebp + ecx - 8], edx
+402f13 : mov eax, 4
+402f18 : shl eax, 0
+402f1b : mov ecx, dword ptr [0x406024]
+402f21 : mov dword ptr [ebp + eax - 8], ecx
+402f25 : push 0x404c6c
+402f2a : call 0x402de0
+-------------------------------------
+402f2f : mov esp, ebp
+402f31 : pop ebp
+402f32 : ret 
+-------------------------------------
+402f40 : push ebp
+402f41 : mov ebp, esp
+402f43 : push 8
+402f45 : call 0x402f50
+-------------------------------------
+402f4a : pop ebp
+402f4b : ret 
+-------------------------------------
+402f50 : push ebp
+402f51 : mov ebp, esp
+402f53 : sub esp, 0x31c
+402f59 : push 0x17
+402f5b : call 0x4031e0
+-------------------------------------
+402f60 : test eax, eax
+402f62 : je 0x402f69
+-------------------------------------
+402f64 : mov ecx, dword ptr [ebp + 8]
+402f67 : int 0x29
+-------------------------------------
+402f69 : mov dword ptr [0x406178], eax
+402f6e : mov dword ptr [0x406174], ecx
+402f74 : mov dword ptr [0x406170], edx
+402f7a : mov dword ptr [0x40616c], ebx
+402f80 : mov dword ptr [0x406168], esi
+402f86 : mov dword ptr [0x406164], edi
+402f8c : mov word ptr [0x406190], ss
+402f93 : mov word ptr [0x406184], cs
+402f9a : mov word ptr [0x406160], ds
+402fa1 : mov word ptr [0x40615c], es
+402fa8 : mov word ptr [0x406158], fs
+402faf : mov word ptr [0x406154], gs
+402fb6 : pushfd 
+402fb7 : pop dword ptr [0x406188]
+402fbd : mov eax, dword ptr [ebp]
+402fc0 : mov dword ptr [0x40617c], eax
+402fc5 : mov eax, dword ptr [ebp + 4]
+402fc8 : mov dword ptr [0x406180], eax
+402fcd : lea eax, dword ptr [ebp + 8]
+402fd0 : mov dword ptr [0x40618c], eax
+402fd5 : mov eax, dword ptr [ebp - 0x31c]
+402fdb : mov eax, dword ptr [0x406180]
+402fe0 : mov dword ptr [0x406084], eax
+402fe5 : mov dword ptr [0x406078], 0xc0000409
+402fef : mov dword ptr [0x40607c], 1
+402ff9 : mov dword ptr [0x406088], 1
+403003 : mov ecx, 4
+403008 : imul edx, ecx, 0
+40300b : mov eax, dword ptr [ebp + 8]
+40300e : mov dword ptr [edx + 0x40608c], eax
+403014 : push 0x404c6c
+403019 : call 0x402de0
+-------------------------------------
+40301e : mov esp, ebp
+403020 : pop ebp
+403021 : ret 
+-------------------------------------
+403030 : push ebp
+403031 : mov ebp, esp
+403033 : sub esp, 0x320
+403039 : push 0x17
+40303b : call 0x4031e0
+-------------------------------------
+403040 : test eax, eax
+403042 : je 0x403049
+-------------------------------------
+403044 : mov ecx, dword ptr [ebp + 8]
+403047 : int 0x29
+-------------------------------------
+403049 : mov dword ptr [0x406178], eax
+40304e : mov dword ptr [0x406174], ecx
+403054 : mov dword ptr [0x406170], edx
+40305a : mov dword ptr [0x40616c], ebx
+403060 : mov dword ptr [0x406168], esi
+403066 : mov dword ptr [0x406164], edi
+40306c : mov word ptr [0x406190], ss
+403073 : mov word ptr [0x406184], cs
+40307a : mov word ptr [0x406160], ds
+403081 : mov word ptr [0x40615c], es
+403088 : mov word ptr [0x406158], fs
+40308f : mov word ptr [0x406154], gs
+403096 : pushfd 
+403097 : pop dword ptr [0x406188]
+40309d : mov eax, dword ptr [ebp]
+4030a0 : mov dword ptr [0x40617c], eax
+4030a5 : mov eax, dword ptr [ebp + 4]
+4030a8 : mov dword ptr [0x406180], eax
+4030ad : lea eax, dword ptr [ebp + 8]
+4030b0 : mov dword ptr [0x40618c], eax
+4030b5 : mov eax, dword ptr [ebp - 0x320]
+4030bb : mov eax, dword ptr [0x406180]
+4030c0 : mov dword ptr [0x406084], eax
+4030c5 : mov dword ptr [0x406078], 0xc0000409
+4030cf : mov dword ptr [0x40607c], 1
+4030d9 : cmp dword ptr [ebp + 0xc], 0
+4030dd : jbe 0x4030ec
+-------------------------------------
+4030df : cmp dword ptr [ebp + 0x10], 0
+4030e3 : jne 0x4030ec
+-------------------------------------
+4030e5 : mov dword ptr [ebp + 0xc], 0
+-------------------------------------
+4030ec : cmp dword ptr [ebp + 0xc], 0xe
+4030f0 : jbe 0x4030fb
+-------------------------------------
+4030f2 : mov ecx, dword ptr [ebp + 0xc]
+4030f5 : sub ecx, 1
+4030f8 : mov dword ptr [ebp + 0xc], ecx
+-------------------------------------
+4030fb : mov edx, dword ptr [ebp + 0xc]
+4030fe : add edx, 1
+403101 : mov dword ptr [0x406088], edx
+403107 : mov eax, 4
+40310c : imul ecx, eax, 0
+40310f : mov edx, dword ptr [ebp + 8]
+403112 : mov dword ptr [ecx + 0x40608c], edx
+403118 : mov dword ptr [ebp - 4], 0
+40311f : jmp 0x40312a
+-------------------------------------
+403121 : mov eax, dword ptr [ebp - 4]
+403124 : add eax, 1
+403127 : mov dword ptr [ebp - 4], eax
+-------------------------------------
+40312a : mov ecx, dword ptr [ebp - 4]
+40312d : cmp ecx, dword ptr [ebp + 0xc]
+403130 : jae 0x403147
+-------------------------------------
+403132 : mov edx, dword ptr [ebp - 4]
+403135 : mov eax, dword ptr [ebp - 4]
+403138 : mov ecx, dword ptr [ebp + 0x10]
+40313b : mov eax, dword ptr [ecx + eax*4]
+40313e : mov dword ptr [edx*4 + 0x406090], eax
+403145 : jmp 0x403121
+-------------------------------------
+403147 : push 0x404c6c
+40314c : call 0x402de0
+-------------------------------------
+403151 : mov esp, ebp
+403153 : pop ebp
+403154 : ret 
+-------------------------------------
+403156 : jmp dword ptr [0x404084]
+-------------------------------------
+40315c : jmp dword ptr [0x404088]
+-------------------------------------
+403162 : jmp dword ptr [0x40408c]
+-------------------------------------
+403168 : jmp dword ptr [0x40404c]
+-------------------------------------
+40316e : jmp dword ptr [0x404048]
+-------------------------------------
+403174 : jmp dword ptr [0x404044]
+-------------------------------------
+40317a : jmp dword ptr [0x404040]
+-------------------------------------
+403180 : jmp dword ptr [0x40403c]
+-------------------------------------
+403186 : jmp dword ptr [0x404038]
+-------------------------------------
+40318c : jmp dword ptr [0x404034]
+-------------------------------------
+403192 : jmp dword ptr [0x404030]
+-------------------------------------
+403198 : jmp dword ptr [0x40402c]
+-------------------------------------
+40319e : jmp dword ptr [0x404028]
+-------------------------------------
+4031a4 : jmp dword ptr [0x404024]
+4031aa : jmp dword ptr [0x404020]
+4031b0 : jmp dword ptr [0x40401c]
+4031b6 : jmp dword ptr [0x404018]
+4031bc : jmp dword ptr [0x404014]
+4031c2 : jmp dword ptr [0x404010]
+4031c8 : jmp dword ptr [0x40400c]
+4031ce : jmp dword ptr [0x404008]
+4031d4 : jmp dword ptr [0x404004]
+4031da : jmp dword ptr [0x404000]
+-------------------------------------
+4031e0 : jmp dword ptr [0x404050]
+4031e6 : std 
+4031e7 : std 
+4031e8 : std 
+4031e9 : std 
+4031ea : stosd dword ptr es:[edi], eax
+4031eb : stosd dword ptr es:[edi], eax
+4031ec : stosd dword ptr es:[edi], eax
+4031ed : stosd dword ptr es:[edi], eax
+4031ee : stosd dword ptr es:[edi], eax
+4031ef : stosd dword ptr es:[edi], eax
+4031f0 : stosd dword ptr es:[edi], eax
+4031f1 : stosd dword ptr es:[edi], eax
+4031f2 : out dx, al
+-------------------------------------

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="redasm"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/huguangyu/coding_env/redasm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/huguangyu/coding_env/redasm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/huguangyu/coding_env/redasm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="redasm">
+				<Option output="/Users/huguangyu/coding_env/redasm/cmake-build-debug/redasm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/huguangyu/coding_env/redasm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/huguangyu/coding_env/redasm/capstone"/>
+					<Add directory="/Users/huguangyu/coding_env/redasm/capstone/include"/>
+					<Add directory="/Users/huguangyu/coding_env/redasm/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 redasm"/>
+					<CompileFile command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="redasm/fast">
+				<Option output="/Users/huguangyu/coding_env/redasm/cmake-build-debug/redasm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/huguangyu/coding_env/redasm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/huguangyu/coding_env/redasm/capstone"/>
+					<Add directory="/Users/huguangyu/coding_env/redasm/capstone/include"/>
+					<Add directory="/Users/huguangyu/coding_env/redasm/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 redasm/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j12 -f &quot;/Users/huguangyu/coding_env/redasm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/capstone/include/arm.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/capstone/include/arm64.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/capstone/include/capstone.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/capstone/include/mips.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/capstone/include/platform.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/capstone/include/ppc.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/capstone/include/sparc.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/capstone/include/systemz.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/capstone/include/x86.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/capstone/include/xcore.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/include/baseblock.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/include/pe.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/include/redasm.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/include/utility.h">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/src/baseblock.cpp">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/src/pe.cpp">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/src/redasm.cpp">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/src/utility.cpp">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/test.cpp">
+			<Option target="redasm"/>
+		</Unit>
+		<Unit filename="/Users/huguangyu/coding_env/redasm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
